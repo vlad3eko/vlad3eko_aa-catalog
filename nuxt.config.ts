@@ -1,0 +1,24 @@
+import tailwindcss from "@tailwindcss/vite";
+
+export default defineNuxtConfig({
+    compatibilityDate: '2025-07-15',
+    devtools: {enabled: true},
+    css: ['~/assets/css/main.css'],
+    vite: {
+        plugins: [
+            tailwindcss(),
+        ],
+    },
+    app: {
+        head: {
+            title: 'New',
+            meta: [
+                {name: 'description', content: 'Everything about Nuxt 3'}
+            ],
+            link: [
+                {rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Material+Icons"}
+            ]
+        }
+    },
+    modules: ['@vueuse/nuxt', '@nuxt/image'],
+})

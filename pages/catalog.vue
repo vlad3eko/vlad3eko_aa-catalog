@@ -1,0 +1,42 @@
+<template>
+  <div>
+    <catalog-sort v-model="searchCards" v-model:category="selectedCategory" :categories="arrayCategories"
+                  :cards="filteredCatalogs"/>
+    <button @click="resetControls" class="border p-1 mt-3">Сбросить сортировку</button>
+  </div>
+  <div class="flex justify-around flex-wrap mt-10 mb-10 ">
+    <catalog-cards-list :cards="filteredCatalogs" />
+  </div>
+</template>
+
+<script setup>
+
+const {data: cards} = await useFetch('/api/catalog')
+
+const arrayCategories = ref([...new Set(cards.value.map(item => item.category))])
+const searchCards = ref('')
+const selectedCategory = ref('')
+
+const filteredCatalogs = computed(() => {
+  if (!searchCards.value && !selectedCategory.value) {
+    return cards.value
+  } else if (searchCards.value) {
+    return cards.value.filter(card =>
+        card.name.toLowerCase().includes(searchCards.value.toLowerCase())
+    )
+  } else if (selectedCategory.value) {
+    return cards.value.filter(card =>
+        card.category.includes(selectedCategory.value))
+  }
+})
+
+const resetControls = () => {
+  searchCards.value = ''
+  selectedCategory.value = ''
+}
+
+</script>
+
+<style scoped>
+
+</style>
