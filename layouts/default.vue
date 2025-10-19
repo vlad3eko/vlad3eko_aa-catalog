@@ -10,7 +10,7 @@
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/catalog">
+              <NuxtLink to="/pages/catalogs">
                 Total
               </NuxtLink>
             </li>
@@ -36,7 +36,7 @@
             <Menu/>
           </div>
           <div>
-            <router-view/>
+            <slot/>
           </div>
         </div>
         <div class="grid justify-items-stretch">

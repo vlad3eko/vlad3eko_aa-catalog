@@ -1,6 +1,6 @@
 <template>
   <div>
-    this is main page
+    <h2>this is Error Page</h2>
   </div>
 </template>
 

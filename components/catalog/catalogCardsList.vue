@@ -8,7 +8,6 @@
 
 <script setup>
 
-
 defineProps(['cards'])
 
 </script>
