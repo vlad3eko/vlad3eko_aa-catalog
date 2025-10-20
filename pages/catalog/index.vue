@@ -1,15 +1,19 @@
 <template>
-  <div>
+  <div class="bg-gray-200">
     <catalog-sort v-model="searchCards" v-model:category="selectedCategory" :categories="arrayCategories"
                   :cards="filteredCatalogs"/>
     <button @click="resetControls" class="border p-1 mt-3">Сбросить сортировку</button>
   </div>
-  <div class="flex justify-around flex-wrap mt-10 mb-10 ">
+  <div class="flex justify-around flex-wrap mt-10">
     <catalog-cards-list :cards="filteredCatalogs" />
   </div>
 </template>
 
 <script setup>
+
+definePageMeta({
+  layout: 'operators-prod',
+})
 
 const {data: cards} = await useFetch('/api/catalog')
 

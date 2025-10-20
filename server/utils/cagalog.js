@@ -73,7 +73,7 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""},
 		],
 		"price": '13499 - 15499',
-		"img": "/catalog/tech/clearAir.png",
+		"img": "/catalog/tech/clearAir.jpg",
 		"category": "Техника"
 	},
 	{
@@ -99,7 +99,7 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""},
 		],
 		"price": '6000',
-		"img": "/catalog/tech/electro.png",
+		"img": "/catalog/tech/electro.jpg",
 		"category": "Техника"
 	},
 	{
@@ -125,7 +125,7 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""},
 		],
 		"price": '6000',
-		"img": "/catalog/tech/mob.png",
+		"img": "/catalog/tech/mob.jpg",
 		"category": "Техника"
 	},
 	{
@@ -186,7 +186,7 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""},
 			{"subtitle": "", "subDescription": ""},
 		],
-		"price": 'цена',
+		"price": '8500-8999',
 		"img": "/catalog/tech/TV.jpg",
 		"category": "Техника"
 	},
@@ -213,7 +213,7 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""},
 			{"subtitle": "", "subDescription": ""}
 		],
-		"price": "цена",
+		"price": "6000",
 		"img": "/catalog/tech/vacuum.jpg",
 		"category": "Техника"
 	},
@@ -239,7 +239,7 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""},
 			{"subtitle": "", "subDescription": ""}
 		],
-		"price": "цена",
+		"price": "10000 - 10999",
 		"img": "/catalog/health/eyes.jpg",
 		"category": "Здоровье"
 	},
@@ -265,7 +265,7 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""},
 			{"subtitle": "", "subDescription": ""}
 		],
-		"price": "цена",
+		"price": "6999-7999",
 		"img": "/catalog/health/hears.jpg",
 		"category": "Здоровье"
 	},
@@ -292,7 +292,7 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""},
 			{"subtitle": "", "subDescription": ""}
 		],
-		"price": "цена",
+		"price": "15999-17000",
 		"img": "/catalog/health/matras.jpg",
 		"category": "Здоровье"
 	},
@@ -318,7 +318,7 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""},
 			{"subtitle": "", "subDescription": ""}
 		],
-		"price": "цена",
+		"price": "14500 - 15999",
 		"img": "/catalog/health/spaLeg.jpg",
 		"category": "Здоровье"
 	},
@@ -338,7 +338,7 @@ export const catalog = [
 			{"subtitle": "Эргономичная форма. ", "subDescription": "Повторяет анатомию сустава для лучшего прилегания."}
 		],
 		"presentation": [],
-		"price": "цена",
+		"price": "9999-10999",
 		"img": "/catalog/health/sustavi.jpg",
 		"category": "Здоровье"
 	},
@@ -364,7 +364,7 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""},
 			{"subtitle": "", "subDescription": ""}
 		],
-		"price": "цена",
+		"price": "5000",
 		"img": "/catalog/beauty/chanelAllure.jpg",
 		"category": "Красота"
 	},
@@ -390,7 +390,7 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""},
 			{"subtitle": "", "subDescription": ""}
 		],
-		"price": "цена",
+		"price": "5000",
 		"img": "/catalog/beauty/chanelDior.jpg",
 		"category": "Красота"
 	},
@@ -416,7 +416,7 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""},
 			{"subtitle": "", "subDescription": ""}
 		],
-		"price": "цена",
+		"price": "5000",
 		"img": "/catalog/beauty/diorJadore.jpg",
 		"category": "Красота"
 	},
@@ -442,7 +442,7 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""},
 			{"subtitle": "", "subDescription": ""}
 		],
-		"price": "цена",
+		"price": "5000",
 		"img": "/catalog/beauty/gucciBloom.jpg",
 		"category": "Красота"
 	},
@@ -468,7 +468,7 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""},
 			{"subtitle": "", "subDescription": ""}
 		],
-		"price": "цена",
+		"price": "5000",
 		"img": "/catalog/beauty/gucciFlora.jpg",
 		"category": "Красота"
 	},
@@ -494,7 +494,7 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""},
 			{"subtitle": "", "subDescription": ""}
 		],
-		"price": "цена",
+		"price": "5000",
 		"img": "/catalog/beauty/chanelCoco.jpg",
 		"category": "Красота"
 	},
@@ -520,7 +520,7 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""},
 			{"subtitle": "", "subDescription": ""}
 		],
-		"price": "цена",
+		"price": "5000",
 		"img": "/catalog/beauty/chanelParis.jpg",
 		"category": "Красота"
 	}

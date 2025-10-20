@@ -10,6 +10,8 @@
 
 </script>
 
-<style scoped>
-
+<style>
 </style>
+
+<script setup lang="ts">
+</script>

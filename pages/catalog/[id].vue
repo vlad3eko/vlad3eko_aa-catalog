@@ -1,10 +1,14 @@
 <template>
-  <div>
+  <div class="container ">
     <catalog-card-details :card="data"/>
   </div>
 </template>
 
 <script setup>
+
+definePageMeta({
+  layout: 'operators-prod',
+})
 
 const route = useRoute()
 

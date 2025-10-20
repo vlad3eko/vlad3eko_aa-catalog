@@ -5,7 +5,7 @@
         <div class="flex">
           <ul v-for="listMenu in menu" class="ml-10 first:ml-0 relative " :key="listMenu.id">
             <div v-on-click-outside="hideMenu">
-              <li class="w-max ml-10 first:ml-0 ">
+              <li class="w-max ml-10 first:ml-0">
                 <NuxtLink :to="listMenu.link" @click.prevent="showMenuList(listMenu.id)" class="flex items-center cursor-pointer">
                   <div>
                     {{ listMenu.name }}
