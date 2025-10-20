@@ -1,6 +1,6 @@
 <template>
   <div class="mt-10 ">
-    <h1 class="pt-4 sticky text-4xl font-bold border-b mb-5 pb-5 border-b-gray-300 bg-gray-200 uppercase  sticky z-[999] top-0">
+    <h1 class="pt-4 sticky text-4xl font-bold border-b mb-5 pb-5 border-b-gray-300 bg-gray-200 uppercase z-[999] top-12">
       {{ card.name }}</h1>
     <div class="flex">
       <div class="self-start mr-10 sticky top-10 z-999 mix-blend-multiply">
