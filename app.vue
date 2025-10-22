@@ -12,6 +12,7 @@
 
 <style>
 * {
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
 }
+
 </style>
