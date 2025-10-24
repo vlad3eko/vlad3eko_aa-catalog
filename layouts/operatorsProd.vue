@@ -24,6 +24,6 @@ const menuCatalog = useTemplateRef('menuCatalog')
 
 <style>
 * {
-  font-family: Merriweather, sans-serif;
+  font-family: "Gentium Book Plus", serif;
 }
 </style>
