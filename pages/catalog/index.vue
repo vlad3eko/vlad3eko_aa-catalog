@@ -1,11 +1,14 @@
 <template>
-  <div class="bg-gray-200">
+  <div class="bg-gray-200 hd">
     <catalog-sort v-model="searchCards" v-model:category="selectedCategory" :categories="arrayCategories"
                   :cards="filteredCatalogs"/>
-    <button @click="resetControls" class="border p-1 mt-3">Сбросить сортировку</button>
+    <div v-show="searchCards || selectedCategory" class="cursor-pointer border w-max mx-auto mt-5 p-1 flex">
+      <span class="material-symbols-outlined">search_off</span>
+      <button @click="resetControls" class="cursor-pointer">Сбросить фильтр</button>
+    </div>
   </div>
   <div class="flex justify-around flex-wrap mt-10">
-    <catalog-cards-list :cards="filteredCatalogs" />
+    <catalog-cards-list :cards="filteredCatalogs"/>
   </div>
 </template>
 
