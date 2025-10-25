@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "assets/css/themes/themesMode.scss";
 
 .material-symbols-outlined { z-index: 999; }
 

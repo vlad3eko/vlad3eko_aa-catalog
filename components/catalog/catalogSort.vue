@@ -1,16 +1,16 @@
 <template>
-  <div class="mt-10">
+  <div class="mt-10 p-2 flex justify-center">
     <div v-for="card in cards" :key="card.id">
     </div>
-    <form action="">
+    <form action="" class="theme-panels">
       <label for="selectCategory">Категория: </label>
-      <select form="selectCategory" class="text-center pl-2 pr-2">
+      <select form="selectCategory" class="text-center pl-2 pr-2 theme-text theme-panels">
         <option @click="onSelectCategory(category)" :value="category" v-for="(category, index) in categories"
                 :key="index">{{ category }}
         </option>
       </select>
-      <input type="text" v-model="search" placeholder="название товара.." class="border p-1 ">
     </form>
+      <input type="text" v-model="search" placeholder="название товара.." class="border p-1">
   </div>
 </template>
 

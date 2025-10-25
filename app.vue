@@ -13,6 +13,7 @@
 <style>
 * {
   scroll-behavior: smooth;
+  font-family: "Gentium Book Plus", serif;
 }
 
 </style>
