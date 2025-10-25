@@ -21,7 +21,7 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""},
 		],
 		"price": 6000,
-		"img": "/catalog/tech/casi.jpg",
+		"img": "/catalog/tech/casi.png",
 		"category": "Техника"
 	},
 	{
@@ -47,7 +47,7 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""},
 		],
 		"price": '9500-11999',
-		"img": "/catalog/tech/casiHears.jpg",
+		"img": "/catalog/tech/casiHears.png",
 		"category": "Техника"
 	},
 	{
@@ -73,7 +73,7 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""},
 		],
 		"price": '13499 - 15499',
-		"img": "/catalog/tech/clearAir.jpg",
+		"img": "/catalog/tech/clearAir.png",
 		"category": "Техника"
 	},
 	{
@@ -99,7 +99,7 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""},
 		],
 		"price": '6000',
-		"img": "/catalog/tech/electro.jpg",
+		"img": "/catalog/tech/electro.png",
 		"category": "Техника"
 	},
 	{
@@ -125,7 +125,7 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""},
 		],
 		"price": '6000',
-		"img": "/catalog/tech/mob.jpg",
+		"img": "/catalog/tech/mob.png",
 		"category": "Техника"
 	},
 	{
@@ -151,7 +151,7 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""},
 		],
 		"price": '7000',
-		"img": "/catalog/tech/obogrev.jpg",
+		"img": "/catalog/tech/obogrev.png",
 		"category": "Техника"
 	},
 	{
@@ -187,7 +187,7 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""},
 		],
 		"price": '8500-8999',
-		"img": "/catalog/tech/TV.jpg",
+		"img": "/catalog/tech/TV.png",
 		"category": "Техника"
 	},
 	{
@@ -214,7 +214,7 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""}
 		],
 		"price": "6000",
-		"img": "/catalog/tech/vacuum.jpg",
+		"img": "/catalog/tech/vacuum.png",
 		"category": "Техника"
 	},
 	{
@@ -240,7 +240,7 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""}
 		],
 		"price": "10000 - 10999",
-		"img": "/catalog/health/eyes.jpg",
+		"img": "/catalog/health/eyes.png",
 		"category": "Здоровье"
 	},
 	{
@@ -266,7 +266,7 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""}
 		],
 		"price": "6999-7999",
-		"img": "/catalog/health/hears.jpg",
+		"img": "/catalog/health/hears.png",
 		"category": "Здоровье"
 	},
 	{
@@ -293,7 +293,7 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""}
 		],
 		"price": "15999-17000",
-		"img": "/catalog/health/matras.jpg",
+		"img": "/catalog/health/matras.png",
 		"category": "Здоровье"
 	},
 	{
@@ -319,7 +319,7 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""}
 		],
 		"price": "14500 - 15999",
-		"img": "/catalog/health/spaLeg.jpg",
+		"img": "/catalog/health/spaLeg.png",
 		"category": "Здоровье"
 	},
 	{
@@ -339,7 +339,7 @@ export const catalog = [
 		],
 		"presentation": [],
 		"price": "9999-10999",
-		"img": "/catalog/health/sustavi.jpg",
+		"img": "/catalog/health/sustavi.png",
 		"category": "Здоровье"
 	},
 	{
@@ -365,12 +365,12 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""}
 		],
 		"price": "5000",
-		"img": "/catalog/beauty/chanelAllure.jpg",
+		"img": "/catalog/beauty/chanelAllure.png",
 		"category": "Красота"
 	},
 	{
 		"id": 14,
-		"name": "Духи Chanel Dior",
+		"name": "Духи Chanel Bleu",
 		"description": [
 			{"title": "Почему это важно"},
 			{"subtitle": "Воплощение роскоши и стиля. ", "subDescription": "Chanel Dior — аромат, объединяющий чувственность и уверенность. Он создан для тех, кто хочет подчеркнуть свой статус и вкус."},
@@ -391,7 +391,7 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""}
 		],
 		"price": "5000",
-		"img": "/catalog/beauty/chanelDior.jpg",
+		"img": "/catalog/beauty/chanelBleu.png",
 		"category": "Красота"
 	},
 	{
@@ -417,7 +417,7 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""}
 		],
 		"price": "5000",
-		"img": "/catalog/beauty/diorJadore.jpg",
+		"img": "/catalog/beauty/diorJadore.png",
 		"category": "Красота"
 	},
 	{
@@ -443,7 +443,7 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""}
 		],
 		"price": "5000",
-		"img": "/catalog/beauty/gucciBloom.jpg",
+		"img": "/catalog/beauty/gucciBloom.png",
 		"category": "Красота"
 	},
 	{
@@ -469,7 +469,7 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""}
 		],
 		"price": "5000",
-		"img": "/catalog/beauty/gucciFlora.jpg",
+		"img": "/catalog/beauty/gucciFlora.png",
 		"category": "Красота"
 	},
 	{
@@ -495,7 +495,7 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""}
 		],
 		"price": "5000",
-		"img": "/catalog/beauty/chanelCoco.jpg",
+		"img": "/catalog/beauty/chanelCoco.png",
 		"category": "Красота"
 	},
 	{
@@ -521,7 +521,7 @@ export const catalog = [
 			{"subtitle": "", "subDescription": ""}
 		],
 		"price": "5000",
-		"img": "/catalog/beauty/chanelParis.jpg",
+		"img": "/catalog/beauty/chanelParis.png",
 		"category": "Красота"
 	}
 ]

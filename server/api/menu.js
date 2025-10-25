@@ -8,27 +8,8 @@ export default defineEventHandler((event) => {
 			"list": []
 		},
 		{
-			"id": 1,
-			"name": "Информация",
-			"link": "",
-			"list": [
-				{
-					"id": 1.1,
-					"name": "Заказы",
-					"link": "/",
-					"list": []
-				},
-				{
-					"id": 1.1,
-					"name": "Статистика",
-					"link": "/about",
-					"list": []
-				},
-			]
-		},
-		{
 			"id": 3,
-			"name": "Помощь",
+			"name": "Связь",
 			"link": "/",
 			"list": []
 		},

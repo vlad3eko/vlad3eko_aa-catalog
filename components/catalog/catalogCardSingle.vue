@@ -10,7 +10,7 @@
         </p>
       </div>
       <div class="rounded-[4px]">
-        <NuxtImg :src="card.img" class="h-[450px] object-cover w-full mix-blend-multiply"/>
+        <NuxtImg :src="card.img" class="h-[350px] object-cover mx-auto"/>
       </div>
       <div class="m-5">
         <p class="font-bold border-b border-b-gray-300 pb-2">

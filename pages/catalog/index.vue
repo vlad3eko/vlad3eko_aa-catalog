@@ -1,9 +1,9 @@
 <template>
-  <div class="bg-gray-200 hd">
+  <div class="theme-panels hd rounded-3xl">
     <catalog-sort v-model="searchCards" v-model:category="selectedCategory" :categories="arrayCategories"
                   :cards="filteredCatalogs"/>
     <div v-show="searchCards || selectedCategory" class="cursor-pointer border w-max mx-auto mt-5 p-1 flex">
-      <span class="material-symbols-outlined">search_off</span>
+      <span class="material-symbols-outlined theme-text">search_off</span>
       <button @click="resetControls" class="cursor-pointer">Сбросить фильтр</button>
     </div>
   </div>

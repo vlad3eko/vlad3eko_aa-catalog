@@ -1,0 +1,167 @@
+$background: black;
+
+.themeDark {
+  background: #191B1C;
+  color: #707070;
+
+  & .theme-background {
+    background: #191B1C;
+  }
+
+  & .theme-panels {
+    background: #252829;
+  }
+
+  & .theme-text {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  & .theme-menu {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+
+  & .theme-titles {
+    background: #252829;
+    color: #707070;
+  }
+
+  & .theme-subTitles {
+
+  }
+
+  & .theme-card {
+    background: #252829;
+    &:hover {
+      background: #ececec;
+    }
+  }
+
+  & .theme-hover {
+
+  }
+
+  & .theme-border {
+
+  }
+
+  & .theme-descriptions {
+
+  }
+}
+
+.themeLight {
+  background: oklch(92.8% 0.006 264.531);
+
+  & .theme-background {
+    background: oklch(21% .034 264.665);
+  }
+
+  & .theme-panels {
+    background: oklch(92.8% 0.006 264.531);
+  }
+
+  & .theme-text {
+    color: black;
+  }
+
+  & .theme-menu {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+
+  & .theme-titles {
+    background: oklch(87.9% 0.169 91.605);
+  }
+
+  & .theme-subTitles {
+
+  }
+
+  & .theme-card {
+    background: white;
+    &:hover {
+      background: #ececec;
+    }
+  }
+
+  & .theme-hover {
+
+  }
+
+  & .theme-border {
+
+  }
+
+  & .theme-descriptions {
+
+  }
+}
+
+@mixin theme-background {
+
+}
+
+@mixin theme-panels {
+
+}
+
+@mixin theme-text {
+
+}
+
+@mixin theme-titles {
+
+}
+
+@mixin theme-subTitles {
+
+}
+
+@mixin theme-card {
+
+}
+
+@mixin theme-hover {
+
+}
+
+@mixin theme-border {
+
+}
+
+@mixin theme-descriptions {
+
+}
+
+@mixin themeDark {
+  background: chocolate;
+  @include theme-background;
+  @include theme-panels;
+  @include theme-text;
+  @include theme-titles;
+  @include theme-subTitles;
+  @include theme-card;
+  @include theme-hover;
+  @include theme-border;
+  @include theme-descriptions;
+}
+
+@mixin themeLight {
+  $textColor: white;
+  @include theme-background;
+  @include theme-panels;
+  @include theme-text;
+  @include theme-titles;
+  @include theme-subTitles;
+  @include theme-card;
+  @include theme-hover;
+  @include theme-border;
+  @include theme-descriptions;
+}
