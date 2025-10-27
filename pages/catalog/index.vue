@@ -2,9 +2,9 @@
   <div class="theme-panels hd rounded-3xl flex justify-center items-center sticky top-15.5 left-50 select-none">
     <catalog-sort v-model="searchCards" v-model:category="selectedCategory" :categories="arrayCategories"
                   :cards="filteredCatalogs"/>
-    <div v-show="searchCards || selectedCategory" @click="resetControls" class="cursor-pointer border w-max flex h-full p-1">
+    <div v-show="searchCards || selectedCategory" @click="resetControls" class="cursor-pointer border w-max flex h-full p-1 hover:text-[#12b488] font-bold uppercase tracking-widest transition-colors">
       <span class="material-symbols-outlined theme-text">search_off</span>
-      <button>Сбросить фильтр</button>
+      <p>Сбросить фильтр</p>
     </div>
   </div>
   <div class="flex justify-around flex-wrap mt-10">
