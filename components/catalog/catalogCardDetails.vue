@@ -1,6 +1,6 @@
 <template>
   <div class="mt-5">
-    <h1 class="pt-4 sticky text-4xl font-bold border-b mb-5 pb-5 border-b-gray-300 theme-panels uppercase z-[999] top-15">
+    <h1 class="pt-4 sticky text-4xl font-bold border-b mb-5 pb-5 border-b-gray-300 theme-panels uppercase z-[999] top-15 select-text">
       {{ card.name }}</h1>
     <div class="flex">
       <div class="self-start mr-10 sticky top-20 z-999">
