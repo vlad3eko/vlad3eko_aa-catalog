@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-10 p-2 flex justify-center">
+  <div class="p-2 flex justify-center items-center">
     <div v-for="card in cards" :key="card.id">
     </div>
     <form action="" class="theme-panels">
