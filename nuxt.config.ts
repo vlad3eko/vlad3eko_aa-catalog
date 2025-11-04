@@ -1,6 +1,9 @@
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
+    supabase: {
+        redirect: false
+    },
     compatibilityDate: '2025-07-15',
     devtools: {enabled: true},
     css: ['~/assets/css/main.css'],
@@ -25,6 +28,6 @@ export default defineNuxtConfig({
             ]
         }
     },
-    modules: ['@vueuse/nuxt', '@nuxt/image', ''],
+    modules: ['@vueuse/nuxt', '@nuxt/image', "@nuxtjs/supabase"],
     experimental: {asyncContext: true},
 })

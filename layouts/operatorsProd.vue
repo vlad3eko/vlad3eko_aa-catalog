@@ -6,6 +6,7 @@
           <div class="sticky top-0 z-10 theme-background w-full p-1 rounded-2xl">
             <div class="flex justify-between">
               <Menu class="mx-auto"/>
+
               <div @click="setTheme" class="justify-self-end">
                 <span v-if="themeChanged"
                       class="material-symbols-outlined cursor-pointer md-48">brightness_7</span>
@@ -18,11 +19,16 @@
           </div>
         </div>
       </div>
+      <div class="fixed top-2 right-5">
+        <logout :themeChanged/>
+      </div>
     </div>
   </main>
 </template>
 
 <script setup>
+
+import Logout from "~/components/auth/logout.vue";
 
 const changeTheme = ref()
 const themeChanged = ref(true)
@@ -32,6 +38,14 @@ const setTheme = () => {
   changeTheme.value.classList.toggle(['themeDark'])
   themeChanged.value = !themeChanged.value
 }
+
+const user = useSupabaseUser()
+
+watch(user, () =>  {
+  if (!user.value) {
+    return navigateTo('/login')
+  }
+}, { immediate: true })
 
 </script>
 

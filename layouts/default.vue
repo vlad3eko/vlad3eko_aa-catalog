@@ -10,7 +10,7 @@
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/catalog/">
+              <NuxtLink to="/">
                 Total
               </NuxtLink>
             </li>

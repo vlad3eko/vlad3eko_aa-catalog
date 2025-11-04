@@ -4,15 +4,14 @@ export default defineEventHandler((event) => {
 		{
 			"id": 2,
 			"name": "Агент Ассист",
-			"link": "/catalog",
+			"link": "/",
 			"list": []
 		},
 		{
 			"id": 3,
 			"name": "Связь",
-			"link": "/",
+			"link": "/about",
 			"list": []
 		},
 	]
-
 })
