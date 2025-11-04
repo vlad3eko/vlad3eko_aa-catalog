@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@nuxt/image": "^1.11.0",
+    "@nuxtjs/supabase": "^2.0.1",
     "@tailwindcss/vite": "^4.1.14",
     "@vueuse/components": "^13.9.0",
     "nuxt": "^3.19.3",
