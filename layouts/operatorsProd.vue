@@ -1,10 +1,10 @@
 <template>
   <main class="bg-gray-200 h-full relative themeLight" ref="changeTheme">
     <div class="text-center">
-      <div class="">
+      <div class="mr-20">
         <div class="container mx-auto min-h-[100vh]">
           <div class="sticky top-0 z-10 theme-background w-full p-1 rounded-2xl">
-            <div class="flex justify-between">
+            <div class="flex justify-between ">
               <Menu class="mx-auto"/>
 
               <div @click="setTheme" class="justify-self-end">
