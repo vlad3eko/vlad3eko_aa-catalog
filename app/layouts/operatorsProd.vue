@@ -21,7 +21,7 @@
       </div>
     </div>
   </main>
-  <footer-component :class="themeChanged ? 'themeDark' : 'themeLight' "/>
+  <footer-component :class="themeChanged ? 'themeLight' : 'themeDark' "/>
 </template>
 
 <script setup>
