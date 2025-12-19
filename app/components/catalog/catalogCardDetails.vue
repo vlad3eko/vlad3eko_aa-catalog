@@ -4,7 +4,7 @@
       {{ card.name }}</h1>
     <div class="grid grid-cols-2">
       <div class="self-start sticky top-20 z-999 scale-x-75 scale-y-75">
-        <NuxtImg :src="card.img" :alt="card.name" class="rounded-2xl max-w-130"/>
+        <NuxtImg :src="card.img" :alt="card.name"/>
       </div>
       <div class="text-left pb-20 w-5xl">
         <span
@@ -52,7 +52,7 @@
 defineProps(['card'])
 
 const showPrice = ref(false)
-const showDescription = ref(false)
+const showDescription = ref(true)
 const showPresentation = ref(false)
 
 </script>

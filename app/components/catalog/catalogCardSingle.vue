@@ -31,7 +31,7 @@
 
 <script setup>
 
-const {card} = defineProps(['card'])
+defineProps(['card'])
 
 </script>
 

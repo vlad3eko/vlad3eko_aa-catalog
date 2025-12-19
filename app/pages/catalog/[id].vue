@@ -1,10 +1,7 @@
 <template>
-  <div class="container ">
+  <div class="container pb-20">
     <catalog-card-details :card="data"/>
-
-
-    <h2 class="text-2xl text-left border-b-gray-700 pb-5">Так-же выбирают</h2>
-    <CatalogCardsScroll/>
+    <CatalogCardsRecommends/>
   </div>
 </template>
 
