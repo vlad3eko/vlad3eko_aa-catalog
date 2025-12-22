@@ -1,13 +1,13 @@
 <template>
   <div class="cursor-pointer flex flex-col justify-between">
     <NuxtLink :to="`/catalog/${card.id}`">
-      <div class="flex justify-around m-1">
-        <p class="font-bold text-2xl text-neutral-700">
+      <div class="flex justify-around m-1 font-bold text-2xl text-neutral-700">
+        <span v-if="!card.price.length">
           {{ card.price }} ₽
-        </p>
-        <p v-show="false">
-          <span class="material-icons p-1 bg-[#12777E] text-white cursor-pointer">add</span>
-        </p>
+        </span>
+        <span v-if="card.price.length">
+          {{ card.price[0] }} - {{ card.price[1] }} ₽
+        </span>
       </div>
       <div class="rounded-[4px]">
         <NuxtImg :src="card.img" class="h-[350px] object-cover mx-auto"/>
@@ -16,14 +16,11 @@
         <p class="font-bold border-b border-b-gray-300 pb-2">
           {{ card.name }}
         </p>
-          <p class="text-[#707070]">
-            {{ card.description[1].subtitle }}
-            {{ card.description[2].subtitle }}
-            {{ card.description[3].subtitle }}
-            {{ card.description[4].subtitle }}
-            {{ card.description[5].subtitle }}
-          </p>
+        <span v-for="cardInfoTitle in card.info[0].data" class="text-[#707070]">
+            {{ cardInfoTitle?.title }}
+          </span>
       </div>
+
     </NuxtLink>
 
   </div>
@@ -32,6 +29,7 @@
 <script setup>
 
 defineProps(['card'])
+
 
 </script>
 

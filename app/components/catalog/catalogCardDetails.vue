@@ -18,14 +18,23 @@
             <span v-else class="material-symbols-outlined theme-text">visibility</span>
           </div>
         </div>
+
         <div v-if="showDescription">
           <div v-for="descr in card.description">
-            <p class="text-3xl font-bold text-center mb-5 mt-5 theme-titles rounded-2xl uppercase" ref="descrTitle">
-              {{ descr.title }}</p>
-            <p class="text-1xl inline font-bold">{{ descr.subtitle }}</p>
-            <span>{{ descr.subDescription }}</span>
+            <p
+                class="text-3xl font-bold text-center mb-5 mt-5 theme-titles rounded-2xl uppercase"
+                ref="descrTitle">
+              {{ descr.title }} </p>
+            <p
+                class="text-1xl inline font-bold">
+              {{ descr.subtitle }}
+            </p>
+            <span>
+              {{ descr.subDescription }}
+            </span>
           </div>
         </div>
+
         <div @click="showPresentation = !showPresentation" class="relative">
           <span class="text-[#c4c4c4] block text-3xl text-center uppercase border-b pb-5 mt-5 cursor-pointer">Презентация</span>
           <div class="absolute top-3 right-0">
@@ -51,7 +60,6 @@
 
 defineProps(['card'])
 
-const showPrice = ref(false)
 const showDescription = ref(true)
 const showPresentation = ref(false)
 
