@@ -10,7 +10,7 @@ export const catalog: ICard[] = [
         info: [
             {
                 type: CardDescription.Short,
-                title: "Умные часы: почему это важно",
+                title: "Почему это важно",
                 data: [
                     {
                         title: "Мониторинг физической активности. ",
@@ -52,13 +52,16 @@ export const catalog: ICard[] = [
                     },
                 ]
             },
+        ],
+        presentation: [
             {
                 type: CardDescription.Full,
                 title: "Презентация",
                 data: [
-                    {title: "", description: ""},
-                    {title: "", description: ""},
-                    {title: "", description: ""},
+                    {title: "Алло да [ФИО] Добрый день, это мой мир\\ЛеоМакс отдел закрытия купонов ФИО. Меня зовут Саша. Дело в том что за все года что вы с нами работаете Топшоп\\МойМир\\Леомакс, накопились купоны. Купонами у вас 11.267 и сегодня у них последний день, поэтому вас набираю. Скажите вам новые каталоги приходили?", description: "Нет"},
+                    {title: "Объясню, в новых каталогах за 10ый месяц у нас сейчас появилась новинка это наручно-оздоровительная система вы её на руку надеваете как часы буквально там идёт экранчик и он вам показывает температуру тела, давление, сердцебиение, уровень кислорода и сахара в крови. Если какой-то из этих показателей изменяется данная система начинает пикать и прямо на экране будет написано внимание температура тела повышено 37,7 или внимание уровень кислорода понижен 75%. При маленьких изменениях  конечно они вас беспокоить не будут, но при значительных даст вам знать. Плюс у этого прибора есть такая кнопка мы её называем спасательная если не дай Бог что-то случается нет возможности позвонить написать или сообщить вы на эту кнопку нажимаете и данная система отправляет информацию о вашем местоположении и Состояние организма в скорую и они к вам приезжают без звонка то есть в этом плане действительно очень удобно. Потому что иди знай где вы будете что у вас случится поэтому здесь идёт инструкция на русском языке гарантия идёт на 10 лет это не Китай Это Южная Корея То есть это качество Я думаю компании Samsung Sony вышли в любом случае знаете правда?", description: "Нет"},
+                    {title: "Алло да [ФИО] Добрый день, это мой мир\\ЛеоМакс отдел закрытия купонов ФИО. Меня зовут Саша. Дело в том что за все года что вы с нами работаете Топшоп\\МойМир\\Леомакс, накопились купоны. Купонами у вас 11.267 и сегодня у них последний день, поэтому вас набираю. Скажите вам новые каталоги приходили?", description: "Нет"},
+                    {title: "Алло да [ФИО] Добрый день, это мой мир\\ЛеоМакс отдел закрытия купонов ФИО. Меня зовут Саша. Дело в том что за все года что вы с нами работаете Топшоп\\МойМир\\Леомакс, накопились купоны. Купонами у вас 11.267 и сегодня у них последний день, поэтому вас набираю. Скажите вам новые каталоги приходили?", description: "Нет"},
                 ]
             }
         ],
@@ -72,7 +75,7 @@ export const catalog: ICard[] = [
         info: [
             {
                 type: CardDescription.Short,
-                title: "Умные часы: почему это важно",
+                title: "Почему это важно",
                 data: [
                     {
                         title: "Мониторинг физической активности. ",
@@ -118,16 +121,16 @@ export const catalog: ICard[] = [
                     },
                 ]
             },
+        ],
+        presentation: [
             {
                 type: CardDescription.Full,
                 title: "Презентация",
                 data: [
                     {title: "", description: ""},
-                    {title: "", description: ""},
-                    {title: "", description: ""},
                 ]
             }
-        ],
+        ]
     },
     {
         id: 2,
@@ -138,7 +141,7 @@ export const catalog: ICard[] = [
         info: [
             {
                 type: CardDescription.Short,
-                title: "Умные часы: почему это важно",
+                title: "Почему это важно",
                 data: [
                     {
                         title: "Очиститель воздуха - это уникальное устройство. ",
@@ -178,16 +181,16 @@ export const catalog: ICard[] = [
                     {title: "Сенсорная панель упрвавления. ", description: ""},
                 ]
             },
+        ],
+        presentation: [
             {
                 type: CardDescription.Full,
                 title: "Презентация",
                 data: [
                     {title: "", description: ""},
-                    {title: "", description: ""},
-                    {title: "", description: ""},
                 ]
             }
-        ],
+        ]
     },
     {
         id: 3,
@@ -198,7 +201,7 @@ export const catalog: ICard[] = [
         info: [
             {
                 type: CardDescription.Short,
-                title: "Умные часы: почему это важно",
+                title: "Почему это важно",
                 data: [
                     {
                         title: "Снижение расходов и защита техники. ",
@@ -230,16 +233,16 @@ export const catalog: ICard[] = [
                     },
                 ]
             },
+        ],
+        presentation: [
             {
                 type: CardDescription.Full,
                 title: "Презентация",
                 data: [
                     {title: "", description: ""},
-                    {title: "", description: ""},
-                    {title: "", description: ""},
                 ]
             }
-        ],
+        ]
     },
     {
         id: 4,
@@ -250,7 +253,7 @@ export const catalog: ICard[] = [
         info: [
             {
                 type: CardDescription.Short,
-                title: "Умные часы: почему это важно",
+                title: "Почему это важно",
                 data: [
                     {
                         title: "Связь без сложностей. ",
@@ -283,16 +286,17 @@ export const catalog: ICard[] = [
                     {title: "Кнопка SOS. ", description: "Быстрый вызов близких в экстренной ситуации."},
                 ]
             },
+        ],
+        presentation: [
             {
                 type: CardDescription.Full,
                 title: "Презентация",
                 data: [
                     {title: "", description: ""},
-                    {title: "", description: ""},
-                    {title: "", description: ""},
                 ]
             }
-        ],
+        ]
+
     },
     {
         id: 5,
@@ -303,7 +307,7 @@ export const catalog: ICard[] = [
         info: [
             {
                 type: CardDescription.Short,
-                title: "Умные часы: почему это важно",
+                title: "Почему это важно",
                 data: [
                     {
                         title: "Тепло там, где нужно. ",
@@ -336,16 +340,17 @@ export const catalog: ICard[] = [
                     {title: "Простота использования. ", description: "Вставь в розетку — и наслаждайся теплом."},
                 ]
             },
+        ],
+        presentation: [
             {
                 type: CardDescription.Full,
                 title: "Презентация",
                 data: [
                     {title: "", description: ""},
-                    {title: "", description: ""},
-                    {title: "", description: ""},
                 ]
             }
-        ],
+        ]
+
     },
     {
         id: 6,
@@ -356,7 +361,7 @@ export const catalog: ICard[] = [
         info: [
             {
                 type: CardDescription.Short,
-                title: "Умные часы: почему это важно",
+                title: "Почему это важно",
                 data: [
                     {
                         title: "Современные технологии дома. ",
@@ -389,16 +394,16 @@ export const catalog: ICard[] = [
                     {title: "Поддержка Wi-Fi. ", description: "Стабильное соединение и высокая скорость работы."},
                 ]
             },
+        ],
+        presentation: [
             {
                 type: CardDescription.Full,
                 title: "Презентация",
                 data: [
                     {title: "", description: ""},
-                    {title: "", description: ""},
-                    {title: "", description: ""},
                 ]
             }
-        ],
+        ]
     },
     {
         id: 7,
@@ -409,7 +414,7 @@ export const catalog: ICard[] = [
         info: [
             {
                 type: CardDescription.Short,
-                title: "Умные часы: почему это важно",
+                title: "Почему это важно",
                 data: [
                     {
                         title: "Продлевает свежесть продуктов. ",
@@ -451,16 +456,17 @@ export const catalog: ICard[] = [
                     }
                 ]
             },
+        ],
+        presentation: [
             {
                 type: CardDescription.Full,
                 title: "Презентация",
                 data: [
                     {title: "", description: ""},
-                    {title: "", description: ""},
-                    {title: "", description: ""},
                 ]
             }
-        ],
+        ]
+
     },
     {
         id: 8,
@@ -471,7 +477,7 @@ export const catalog: ICard[] = [
         info: [
             {
                 type: CardDescription.Short,
-                title: "Умные часы: почему это важно",
+                title: "Почему это важно",
                 data: [
                     {
                         title: "Снимает усталость глаз. ",
@@ -510,16 +516,16 @@ export const catalog: ICard[] = [
                     {title: "Компактный дизайн. ", description: "Легко брать с собой в поездки или использовать дома."}
                 ]
             },
+        ],
+        presentation: [
             {
                 type: CardDescription.Full,
                 title: "Презентация",
                 data: [
                     {title: "", description: ""},
-                    {title: "", description: ""},
-                    {title: "", description: ""},
                 ]
             }
-        ],
+        ]
     },
     {
         id: 9,
@@ -530,7 +536,7 @@ export const catalog: ICard[] = [
         info: [
             {
                 type: CardDescription.Short,
-                title: "Умные часы: почему это важно",
+                title: "Почему это важно",
                 data: [
                     {
                         title: "Возвращает чёткость звука. ",
@@ -563,16 +569,16 @@ export const catalog: ICard[] = [
                     {title: "Регулировка громкости. ", description: "Удобное управление под разные ситуации."}
                 ]
             },
+        ],
+        presentation: [
             {
                 type: CardDescription.Full,
                 title: "Презентация",
                 data: [
                     {title: "", description: ""},
-                    {title: "", description: ""},
-                    {title: "", description: ""},
                 ]
             }
-        ],
+        ]
     },
     {
         id: 10,
@@ -583,7 +589,7 @@ export const catalog: ICard[] = [
         info: [
             {
                 type: CardDescription.Short,
-                title: "Умные часы: почему это важно",
+                title: "Почему это важно",
                 data: [
                     {
                         title: "Помогает расслабить тело. ",
@@ -625,16 +631,17 @@ export const catalog: ICard[] = [
                     }
                 ]
             },
+        ],
+        presentation: [
             {
                 type: CardDescription.Full,
                 title: "Презентация",
                 data: [
                     {title: "", description: ""},
-                    {title: "", description: ""},
-                    {title: "", description: ""},
                 ]
             }
-        ],
+        ]
+
     },
     {
         id: 11,
@@ -645,7 +652,7 @@ export const catalog: ICard[] = [
         info: [
             {
                 type: CardDescription.Short,
-                title: "Умные часы: почему это важно",
+                title: "Почему это важно",
                 data: [
                     {
                         title: "Расслабляет и восстанавливает ноги. ",
@@ -678,16 +685,16 @@ export const catalog: ICard[] = [
                     {title: "Лёгкое управление. ", description: "Интуитивные кнопки и безопасная работа от сети."}
                 ]
             },
+        ],
+        presentation: [
             {
                 type: CardDescription.Full,
                 title: "Презентация",
                 data: [
                     {title: "", description: ""},
-                    {title: "", description: ""},
-                    {title: "", description: ""},
                 ]
             }
-        ],
+        ]
     },
     {
         id: 12,
@@ -698,7 +705,7 @@ export const catalog: ICard[] = [
         info: [
             {
                 type: CardDescription.Short,
-                title: "Умные часы: почему это важно",
+                title: "Почему это важно",
                 data: [
                     {
                         title: "Снимает боль и воспаление. ",
@@ -725,16 +732,16 @@ export const catalog: ICard[] = [
                     {title: "Эргономичная форма. ", description: "Повторяет анатомию сустава для лучшего прилегания."}
                 ]
             },
+        ],
+        presentation: [
             {
                 type: CardDescription.Full,
                 title: "Презентация",
                 data: [
                     {title: "", description: ""},
-                    {title: "", description: ""},
-                    {title: "", description: ""},
                 ]
             }
-        ],
+        ]
     },
     {
         id: 13,
@@ -745,7 +752,7 @@ export const catalog: ICard[] = [
         info: [
             {
                 type: CardDescription.Short,
-                title: "Умные часы: почему это важно",
+                title: "Почему это важно",
                 data: [
                     {
                         title: "Подчёркивает индивидуальность. ",
@@ -787,16 +794,16 @@ export const catalog: ICard[] = [
                     }
                 ]
             },
+        ],
+        presentation: [
             {
                 type: CardDescription.Full,
                 title: "Презентация",
                 data: [
                     {title: "", description: ""},
-                    {title: "", description: ""},
-                    {title: "", description: ""},
                 ]
             }
-        ],
+        ]
     },
     {
         id: 14,
@@ -807,7 +814,7 @@ export const catalog: ICard[] = [
         info: [
             {
                 type: CardDescription.Short,
-                title: "Умные часы: почему это важно",
+                title: "Почему это важно",
                 data: [
                     {
                         title: "Воплощение роскоши и стиля. ",
@@ -849,16 +856,16 @@ export const catalog: ICard[] = [
                     }
                 ]
             },
+        ],
+        presentation: [
             {
                 type: CardDescription.Full,
                 title: "Презентация",
                 data: [
                     {title: "", description: ""},
-                    {title: "", description: ""},
-                    {title: "", description: ""},
                 ]
             }
-        ],
+        ]
     },
     {
         id: 15,
@@ -869,7 +876,7 @@ export const catalog: ICard[] = [
         info: [
             {
                 type: CardDescription.Short,
-                title: "Умные часы: почему это важно",
+                title: "Почему это важно",
                 data: [
                     {
                         title: "Аромат женственности и утончённости. ",
@@ -908,16 +915,16 @@ export const catalog: ICard[] = [
                     }
                 ]
             },
+        ],
+        presentation: [
             {
                 type: CardDescription.Full,
                 title: "Презентация",
                 data: [
                     {title: "", description: ""},
-                    {title: "", description: ""},
-                    {title: "", description: ""},
                 ]
             }
-        ],
+        ]
     },
     {
         id: 16,
@@ -928,7 +935,7 @@ export const catalog: ICard[] = [
         info: [
             {
                 type: CardDescription.Short,
-                title: "Умные часы: почему это важно",
+                title: "Почему это важно",
                 data: [
                     {
                         title: "Раскрывает природную женственность. ",
@@ -961,16 +968,16 @@ export const catalog: ICard[] = [
                     {title: "Современный флакон. ", description: "Минималистичный дизайн отражает дух бренда Gucci."}
                 ]
             },
+        ],
+        presentation: [
             {
                 type: CardDescription.Full,
                 title: "Презентация",
                 data: [
                     {title: "", description: ""},
-                    {title: "", description: ""},
-                    {title: "", description: ""},
                 ]
             }
-        ],
+        ]
     },
     {
         id: 17,
@@ -981,7 +988,7 @@ export const catalog: ICard[] = [
         info: [
             {
                 type: CardDescription.Short,
-                title: "Умные часы: почему это важно",
+                title: "Почему это важно",
                 data: [
                     {
                         title: "Аромат весны и лёгкости. ",
@@ -1020,16 +1027,16 @@ export const catalog: ICard[] = [
                     }
                 ]
             },
+        ],
+        presentation: [
             {
                 type: CardDescription.Full,
                 title: "Презентация",
                 data: [
                     {title: "", description: ""},
-                    {title: "", description: ""},
-                    {title: "", description: ""},
                 ]
             }
-        ],
+        ]
     },
     {
         id: 18,
@@ -1040,7 +1047,7 @@ export const catalog: ICard[] = [
         info: [
             {
                 type: CardDescription.Short,
-                title: "Умные часы: почему это важно",
+                title: "Почему это важно",
                 data: [
                     {
                         title: "Символ страсти и элегантности. ",
@@ -1073,16 +1080,16 @@ export const catalog: ICard[] = [
                     {title: "Изысканный флакон. ", description: "Элегантный дизайн подчёркивает роскошь содержимого."}
                 ]
             },
+        ],
+        presentation: [
             {
                 type: CardDescription.Full,
                 title: "Презентация",
                 data: [
                     {title: "", description: ""},
-                    {title: "", description: ""},
-                    {title: "", description: ""},
                 ]
             }
-        ],
+        ]
     },
     {
         id: 19,
@@ -1093,7 +1100,7 @@ export const catalog: ICard[] = [
         info: [
             {
                 type: CardDescription.Short,
-                title: "Умные часы: почему это важно",
+                title: "Почему это важно",
                 data: [
                     {
                         title: "Олицетворяет дух Парижа. ",
@@ -1129,15 +1136,15 @@ export const catalog: ICard[] = [
                     }
                 ]
             },
+        ],
+        presentation: [
             {
                 type: CardDescription.Full,
                 title: "Презентация",
                 data: [
                     {title: "", description: ""},
-                    {title: "", description: ""},
-                    {title: "", description: ""},
                 ]
             }
-        ],
+        ]
     },
 ]

@@ -1,5 +1,3 @@
-import {catalog} from "~~/server/utils/cagalog.js";
-
 export default defineEventHandler((event) => {
 	const { id } = event.context.params
 
