@@ -3,7 +3,8 @@
   <div class="flex items-center gap-5">
 
     <button @click="swiper.prev()">
-      <span class="material-symbols-outlined scale-x-[-2] scale-y-[2] theme-text">arrow_forward</span>
+      <span :class="MATERIAL_ICON_CLASS_COLOR_TEXT"
+            class="md-48 scale-x-[-1]">arrow_forward</span>
     </button>
 
     <ClientOnly>
@@ -31,13 +32,16 @@
     </ClientOnly>
 
     <button @click="swiper.next()">
-      <span class="material-symbols-outlined scale-x-[2] scale-y-[2] theme-text">arrow_forward</span>
+      <span :class="MATERIAL_ICON_CLASS_COLOR_TEXT"
+            class="md-48">arrow_forward</span>
     </button>
 
   </div>
 </template>
 
 <script lang="ts" setup>
+
+import {MATERIAL_ICON_CLASS_COLOR_TEXT} from "~~/server/utils/classes/classes.shortcut";
 
 const {data: cards} = await useFetch('/api/catalog')
 

@@ -1,16 +1,19 @@
 <template>
   <div class="relative">
+
     <div v-if="model">
         <span @click="toggle"
               :class="styleClasses">
-      {{ title }}
-    </span>
+          {{ title }}
+        </span>
       <div v-show="model"
            class="absolute top-3 right-0 cursor-pointer">
-      <span v-if="!isOpen"
-            :class="materialIcon">visibility_off</span>
+        <span v-if="!isOpen"
+              :class="MATERIAL_ICON_CLASS_COLOR_TEXT">visibility_off
+        </span>
         <span v-else
-              :class="materialIcon">visibility</span>
+              :class="MATERIAL_ICON_CLASS_COLOR_TEXT">visibility
+        </span>
       </div>
 
       <div v-show="isOpen">
@@ -18,20 +21,23 @@
       </div>
     </div>
 
-    <div v-if="!model">
-        <span :class="styleClasses">
-      {{ title }}
-    </span>
+    <!--    -->
 
-      <div>
+    <div v-else>
+        <span :class="styleClasses">
+          {{ title }}
+        </span>
+
         <slot/>
-      </div>
+
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
 
+
+import {MATERIAL_ICON_CLASS_COLOR_TEXT} from "~~/server/utils/classes/classes.shortcut";
 
 const props = withDefaults(defineProps<{
   title: string
@@ -40,7 +46,7 @@ const props = withDefaults(defineProps<{
   isShowIcon: true,
 })
 
-const model = defineModel<boolean>('isUnabled',{
+const model = defineModel<boolean>('isUnabled', {
   default: true
 })
 
@@ -59,11 +65,7 @@ const styleClasses = computed(() => {
   }
 })
 
-const materialIcon = computed(() => {
-  return 'material-symbols-outlined theme-text'
-})
-
-  </script>
+</script>
 
 <style scoped>
 

@@ -9,8 +9,11 @@
 
               <div @click="setTheme" class="justify-self-end">
                 <span v-if="themeChanged"
-                      class="material-symbols-outlined cursor-pointer md-48">brightness_7</span>
-                <span v-else class="material-symbols-outlined cursor-pointer md-48">prayer_times</span>
+                      :class="MATERIAL_ICON_CLASS"
+                      class="cursor-pointer md-48">brightness_7</span>
+                <span v-else
+                      :class="MATERIAL_ICON_CLASS"
+                      class="cursor-pointer md-48">prayer_times</span>
               </div>
             </div>
           </div>
@@ -25,6 +28,8 @@
 </template>
 
 <script setup>
+
+import {MATERIAL_ICON_CLASS} from "~~/server/utils/classes/classes.shortcut.js";
 
 const changeTheme = ref()
 const themeChanged = ref(true)

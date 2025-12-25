@@ -3,7 +3,7 @@
     <catalog-sort v-model="searchCards" v-model:category="selectedCategory" :categories="arrayCategories"
                   :cards="filteredCatalogs"/>
     <div v-show="searchCards || selectedCategory" @click="resetControls" class="cursor-pointer border w-max flex h-full p-1 hover:text-[#12b488] font-bold uppercase tracking-widest transition-colors">
-      <span class="material-symbols-outlined theme-text">search_off</span>
+      <span :class="MATERIAL_ICON_CLASS_COLOR_TEXT">search_off</span>
       <p>Сбросить фильтр</p>
     </div>
   </div>
@@ -14,6 +14,8 @@
 
 <script setup>
 
+
+import {MATERIAL_ICON_CLASS_COLOR_TEXT} from "~~/server/utils/classes/classes.shortcut.js";
 
 definePageMeta({
   layout: 'operators-prod',
