@@ -1,4 +1,4 @@
-$background: black;
+@use "themeVariables" as *;
 
 .themeDark {
   background: #191B1C;
@@ -14,6 +14,10 @@ $background: black;
 
   & .theme-text {
     color: rgba(255, 255, 255, 0.3);
+  }
+
+  & .theme-price {
+    color: $price;
   }
 
   & .theme-menu {
@@ -66,6 +70,10 @@ $background: black;
 
   & .theme-text {
     color: black;
+  }
+
+  & .theme-price {
+    color: $price;
   }
 
   & .theme-menu {

@@ -1,14 +1,15 @@
 <template>
   <div class="cursor-pointer flex flex-col justify-between">
     <NuxtLink :to="`/catalog/${props.card.id}`">
-      <div class="flex justify-around m-1 font-bold text-2xl text-neutral-700">
-        <span v-if="typeof props.card.price === 'number'">
-          {{ props.card.price }} ₽
-        </span>
-        <span v-else>
-          {{ props.card.price[0] }} - {{ props.card.price[1] }} ₽
-        </span>
-      </div>
+        <div class="theme-price flex justify-center m-1 mb-5 font-bold text-2xl text-neutral-700">
+          <span v-if="!isRange(props.card.price)">
+                  {{ props.card.price }}
+                </span>
+          <span v-else>
+                  {{ props.card.price[0] }} - {{ props.card.price[1] }}
+                </span>
+          ₽
+        </div>
       <div class="rounded-[4px]">
         <NuxtImg :src="props.card.img" class="h-[350px] object-cover mx-auto"/>
       </div>
@@ -27,6 +28,8 @@
 </template>
 
 <script lang="ts" setup>
+
+import {isRange} from "~~/server/utils/hooks/range.price";
 
 const props = defineProps<{
   card: ICard

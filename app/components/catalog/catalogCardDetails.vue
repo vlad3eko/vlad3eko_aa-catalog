@@ -10,7 +10,15 @@
       <div class="text-left">
 
         <toggle-section title="Стоимость" v-model:is-unabled="toggleSectionEnabled">
-          <p class="font-bold text-center mb-5 mt-5 tracking-widest text-4xl">{{ props.card.price }} ₽</p>
+          <div class="font-bold text-center theme-price mb-5 mt-5 tracking-widest text-4xl">
+          <span v-if="!isRange(props.card.price)">
+                  {{ props.card.price }}
+                </span>
+          <span v-else>
+                  {{ props.card.price[0] }} - {{ props.card.price[1] }}
+                </span>
+          ₽
+          </div>
         </toggle-section>
 
         <toggle-section title="Описание">
@@ -62,6 +70,7 @@
 <script lang="ts" setup>
 
 import ToggleSection from "~/components/ui/ToggleSection.vue";
+import {isRange} from "~~/server/utils/hooks/range.price";
 
 const props = defineProps<{
   card: ICard

@@ -9,12 +9,12 @@
 
     <ClientOnly>
       <swiper-container ref="swiperRef" :init="false" :slides-per-view="6" class="flex overflow-hidden relative">
-        <swiper-slide v-for="recommendCard in cards" :key="recommendCard.id" class="mr-5 self-end">
+        <swiper-slide v-for="recommendCard in cards" :key="recommendCard.id" class="mr-10 self-end">
           <NuxtLink :to="`/catalog/${recommendCard.id}`">
             <div class="w-[250px]">
               <NuxtImg :src="recommendCard.img"
                        class="max-h-[250px] mx-auto object-cover z-[999]"/>
-              <div class="text-[#10C44C] font-bold text-2xl mb-2 block">
+              <div class="theme-price font-bold text-2xl mb-2 block">
                 <span v-if="!isRange(recommendCard.price)">
                   {{ recommendCard.price }}
                 </span>
@@ -42,6 +42,7 @@
 <script lang="ts" setup>
 
 import {MATERIAL_ICON_CLASS_COLOR_TEXT} from "~~/server/utils/classes/classes.shortcut";
+import {isRange} from "~~/server/utils/hooks/range.price";
 
 const {data: cards} = await useFetch('/api/catalog')
 
@@ -50,19 +51,7 @@ const swiperRef = ref<any>(null)
 const swiper = useSwiper(swiperRef, {
   effect: 'slide',
   loop: true,
-  creativeEffect: {
-    prev: {
-      shadow: true,
-    },
-    next: {
-      shadow: true,
-    },
-  },
 })
-
-const isRange = (price: number | [number, number]): price is [number, number] => {
-  return Array.isArray(price)
-}
 
 </script>
 
