@@ -40,6 +40,6 @@ const themeChanged = ref<boolean>(true)
 </script>
 
 <style lang="scss">
-@use "~/assets/css/variables/theme/themesMode";
+@use "~/assets/css/variables/theme/themes-mode";
 
 </style>

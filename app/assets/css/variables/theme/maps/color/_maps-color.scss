@@ -1,4 +1,4 @@
-@import "vars";
+@import "vars-color";
 
 @each $group, $variants in $text-color-roles {
   @each $name, $var in $variants {

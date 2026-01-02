@@ -1,4 +1,4 @@
-@import "variables/theme/themesMode.scss";
+@import "variables/theme/themes-mode.scss";
 @import "tw-animate-css";
 
 @tailwind base;
