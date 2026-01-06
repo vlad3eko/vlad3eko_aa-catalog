@@ -1,8 +1,8 @@
 <template>
-  <div class="theme-panels hd rounded-3xl flex justify-center items-center sticky top-15.5 left-50 select-none">
+  <div class="font-bold rounded-2xl bg-shell flex justify-center items-center sticky top-13 left-50 select-none">
     <catalog-sort v-model="searchCards" v-model:category="selectedCategory" :categories="arrayCategories"
                   :cards="filteredCatalogs"/>
-    <div v-show="searchCards || selectedCategory" @click="resetControls" class="cursor-pointer border w-max flex h-full p-1 hover:text-[#12b488] font-bold uppercase tracking-widest transition-colors">
+    <div v-show="searchCards || selectedCategory" @click="resetControls" class="cursor-pointer border w-max flex h-full p-1 hover:text-secondary font-bold uppercase tracking-widest transition-colors">
       <span :class="MATERIAL_ICON_CLASS_COLOR_TEXT">search_off</span>
       <p>Сбросить фильтр</p>
     </div>

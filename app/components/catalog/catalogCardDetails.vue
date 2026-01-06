@@ -1,5 +1,5 @@
 <template>
-    <h1 class="pt-4 sticky text-3xl font-bold  mb-5 pb-5 title-secondary uppercase rounded-2xl top-15 select-text border-bottom shadow">
+    <h1 class="p-2 sticky text-3xl font-bold text-primary bg-shell z-1 uppercase rounded-2xl top-13  select-text shadow-xl">
       {{ props.card.name }}</h1>
     <div class="grid grid-cols-2">
       <div class="self-start sticky top-0 scale-x-75 scale-y-75">
@@ -9,7 +9,7 @@
       <div class="text-left">
 
         <toggle-section title="Стоимость" v-model:is-unabled="toggleSectionEnabled">
-          <div class="font-bold text-center price-main mb-5 mt-5 tracking-widest text-4xl">
+          <div class="font-bold text-center mb-5 mt-5 tracking-widest text-4xl text-price">
           <span v-if="!isRange(props.card.price)">
                   {{ props.card.price }}
                 </span>
@@ -23,7 +23,7 @@
         <toggle-section title="Описание">
           <div v-for="infoCard in props.card.info" class="mb-5">
             <p
-                class="text-3xl theme-title border-muted-bottom shadow pb-2 text-center mb-5 rounded-2xl uppercase">
+                class="text-3xl shadow-foreground shadow-2xs pb-2 text-center mb-5 rounded-2xl uppercase">
               {{ infoCard.title }} </p>
             <div v-for="infoCardData in infoCard.data" class="mb-2">
               <p

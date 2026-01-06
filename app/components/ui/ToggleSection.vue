@@ -7,7 +7,7 @@
           {{ props.title }}
         </span>
       <div v-show="model"
-           class="absolute top-4 right-0 cursor-pointer">
+           class="absolute top-3.5 right-5 cursor-pointer">
         <span v-if="!isOpen"
               :class="MATERIAL_ICON_CLASS_COLOR_TEXT">visibility_off
         </span>
@@ -57,11 +57,11 @@ const toggle = () => {
 }
 
 const styleClasses = computed(() => {
-  const classicTitle = 'title-main font-bold block text-3xl text-center uppercase py-2 my-5'
+  const classicTitle = 'font-bold block text-3xl text-center uppercase py-2 my-5 '
   if (!model.value) {
     return classicTitle
   } else {
-    return classicTitle + ' cursor-pointer bg-panel'
+    return classicTitle + 'rounded-2xl cursor-pointer bg-panel hover:bg-panel-soft'
   }
 })
 

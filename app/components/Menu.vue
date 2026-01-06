@@ -20,7 +20,7 @@
               <div v-if="showItemId === listMenu.id && listMenu.list.length"
                    class="absolute p-2 rounded-xl top-6.2 left-0  bg-gray-50  pr-7 border shadow-2xs text-left">
                 <ul v-for="(firstHiddenMenu, index) in listMenu.list" :key="index" class="my-2">
-                  <NuxtLink :to="firstHiddenMenu.link" class="text-xs font-bold  border-r-amber-50 text-cyan-800">
+                  <NuxtLink :to="firstHiddenMenu.link" class="text-xs font-bold">
                     {{ firstHiddenMenu.name }}
                   </NuxtLink>
                 </ul>

@@ -1,7 +1,9 @@
+import tailwindcss from '@tailwindcss/vite'
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxt/image', '@nuxt/icon', 'shadcn-nuxt', '@nuxtjs/tailwindcss', 'nuxt-swiper'],
+  modules: ['@nuxt/image', '@nuxt/icon', 'shadcn-nuxt', 'nuxt-swiper', '@nuxtjs/color-mode'],
         app: {
             head: {
                 title: 'New',
@@ -23,6 +25,14 @@ export default defineNuxtConfig({
             }
         },
     css: ['~/assets/css/main.css'],
+    vite: {
+        plugins: [
+            tailwindcss(),
+        ]
+    },
+    colorMode: {
+        classSuffix: '',
+    },
     shadcn: {
         prefix: 'V',
         componentDir: '@/components/ui'
@@ -32,4 +42,5 @@ export default defineNuxtConfig({
             isCustomElement: (tag) => tag.startsWith('swiper-'),
         },
     },
+
 })
