@@ -44,22 +44,5 @@ const themeChanged = ref<boolean>(true)
 </script>
 
 <style lang="scss">
-@use "~/assets/css/variables/theme/themes-mode";
-
-
-body {
-  background-color: #fff;
-  color: rgba(0, 0, 0, 0.8);
-}
-
-.dark {
-  background-color: #091a28;
-  color: #ebf4f1;
-}
-
-.sepia {
-  background-color: #f1e7d0;
-  color: #433422;
-}
 
 </style>

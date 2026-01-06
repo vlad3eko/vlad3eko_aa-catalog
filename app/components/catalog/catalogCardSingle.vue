@@ -1,5 +1,5 @@
 <template>
-  <div class="cursor-pointer h-full bg-card hover:bg-accent rounded-2xl">
+  <div class="cursor-pointer h-full bg-card hover:bg-foreground/80 hover:text-accent rounded-2xl">
     <NuxtLink :to="`/catalog/${props.card.id}`">
         <div class="text-3xl py-5 text-price italic">
           <span v-if="!isRange(props.card.price)">

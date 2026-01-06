@@ -4,7 +4,7 @@
 
     <button @click="swiper.prev()">
       <span :class="MATERIAL_ICON_CLASS_COLOR_TEXT"
-            class="md-48 scale-x-[-1]">arrow_forward</span>
+            class="md-48 scale-x-[-1] cursor-pointer">arrow_forward</span>
     </button>
 
     <ClientOnly>
@@ -23,7 +23,7 @@
               </div>
               <NuxtImg :src="recommendCard.img"
                        class="max-h-[250px] mx-auto"/>
-              <span class="rounded-2xl uppercase">
+              <span class="rounded-2xl uppercase text-primary font-bold">
               {{ recommendCard.name }}</span>
             </div>
           </NuxtLink>
@@ -33,7 +33,7 @@
 
     <button @click="swiper.next()">
       <span :class="MATERIAL_ICON_CLASS_COLOR_TEXT"
-            class="md-48">arrow_forward</span>
+            class="md-48 cursor-pointer">arrow_forward</span>
     </button>
 
   </div>
