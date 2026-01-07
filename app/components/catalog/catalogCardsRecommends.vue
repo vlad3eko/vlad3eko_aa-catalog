@@ -12,7 +12,7 @@
         <swiper-slide v-for="recommendCard in cards" :key="recommendCard.id" class="mr-10">
           <NuxtLink :to="`/catalog/${recommendCard.id}`">
             <div class="max-w-[250px] h-[320px] flex flex-col justify-between">
-              <div class="text-price font-bold xl:text-2xl mb-2 block">
+              <div class="text-price font-bold text-response mb-2 block">
                 <span v-if="!isRange(recommendCard.price)">
                   {{ recommendCard.price }}
                 </span>
@@ -23,7 +23,7 @@
               </div>
               <NuxtImg :src="recommendCard.img"
                        class="max-h-[250px] mx-auto"/>
-              <span class="rounded-2xl uppercase text-primary font-bold">
+              <span class="rounded-2xl uppercase text-primary font-bold text-response">
               {{ recommendCard.name }}</span>
             </div>
           </NuxtLink>

@@ -1,5 +1,6 @@
 @import "../css/variables/theme/theme.css";
 @import "../css/variables/transition";
+@import "../css/variables/sizes/text.css";
 @import "tailwindcss";
 
 
