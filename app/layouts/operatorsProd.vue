@@ -1,33 +1,15 @@
 <template>
-  <main class="h-full relative">
-    <div class="text-center">
+  <main class="relative">
       <div class="bg-background text-foreground">
-        <div class="container mx-auto min-h-[100vh]">
-          <div class="sticky top-0 z-10 w-full rounded-2xl">
-            <div class="flex  items-center bg-background">
-
-              <Menu class="uppercase text-3xl font-bold"/>
-
-              <!-- TODO create component changeTheme add logic swap at hook -->
-              <div>
-                <span v-if="themeChanged"
-                      :class="MATERIAL_ICON_CLASS_COLOR_TEXT"
-                      class="cursor-pointer md-36">contrast</span>
-                <!--TODO create swap logo theme -->
-                <span v-else
-                      :class="MATERIAL_ICON_CLASS_COLOR_TEXT"
-                      class="cursor-pointer md-48 ">prayer_times</span>
-              </div>
+        <div class="container mx-auto">
+          <div class="sticky top-0 z-3">
+            <div class="flex items-center bg-background animate-from-top">
+              <Menu/>
               <change-theme/>
-              <div class="mx-5">
-                <basket/>
-              </div>
+              <basket-sidebar/>
             </div>
           </div>
-          <div>
             <slot/>
-          </div>
-        </div>
       </div>
     </div>
   </main>
@@ -37,14 +19,6 @@
 
 <script lang="ts" setup>
 
-import {MATERIAL_ICON_CLASS_COLOR_TEXT} from "~~/server/utils/classes/material-icon.shortcut.js";
 import ChangeTheme from "~/components/ui/ChangeTheme.vue";
 
-const themeChanged = ref<boolean>(true)
-
-
 </script>
-
-<style lang="scss">
-
-</style>

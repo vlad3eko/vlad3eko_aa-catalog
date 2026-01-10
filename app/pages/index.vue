@@ -28,8 +28,8 @@ definePageMeta({
 const {data: cards} = await useFetch('/api/catalog')
 
 const arrayCategories = ref([...new Set(cards.value?.map(item => item.category))])
-const searchCards = ref('')
-const selectedCategory = ref('')
+const searchCards = ref<string>('')
+const selectedCategory = ref<string>('')
 
 const filteredCatalogs = computed(() => {
   if (!searchCards.value && !selectedCategory.value) {

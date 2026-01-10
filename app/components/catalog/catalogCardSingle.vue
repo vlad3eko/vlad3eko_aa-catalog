@@ -2,7 +2,7 @@
   <div class="cursor-pointer h-full w-full rounded-2xl card flex flex-col justify-between">
 
     <NuxtLink :to="`/catalog/${props.card.id}`">
-      <div class="rounded image-response">
+      <div class="rounded image-response animate-from-top">
         <NuxtImg :src="props.card.img" class="h-full object-cover mx-auto"/>
       </div>
       <div class="m-5">
@@ -28,7 +28,9 @@
       </div>
     </NuxtLink>
 
-    <div class="button text-accent p-3 text-center uppercase tracking-[.25em] cursor-pointer">
+    <div
+        @click="addToBasket"
+        class="button text-accent p-3 text-center uppercase tracking-[.25em] cursor-pointer">
       Добавить в корзину
     </div>
   </div>
@@ -37,13 +39,16 @@
 <script lang="ts" setup>
 
 import {isRange} from "~~/server/utils/hooks/range.price";
+import {useBasketStore} from "~/store/bastet.store";
 
 const props = defineProps<{
   card: ICard
 }>()
 
+const basket = useBasketStore()
+
+const addToBasket = () => {
+  basket.add(props.card)
+}
+
 </script>
-
-<style scoped>
-
-</style>

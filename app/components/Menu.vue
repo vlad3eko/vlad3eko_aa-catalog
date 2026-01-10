@@ -7,7 +7,9 @@
                v-for="listMenu in menu" :key="listMenu.id"
                class="mr-10 last:mr-0 relative">
              <li>
-               <NuxtLink :to="listMenu.link" class=" text-2xl">
+               <NuxtLink
+                   :to="listMenu.link"
+                   class="text-2xl uppercase font-bold">
                  {{ listMenu.name }}
                </NuxtLink>
              </li>

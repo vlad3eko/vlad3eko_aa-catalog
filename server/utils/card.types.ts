@@ -23,3 +23,9 @@ export interface ICard {
     info: ICardDescription[]
     presentation: ICardDescription[]
 }
+
+
+export interface BasketItem {
+    card: ICard,
+    quantity: number
+}

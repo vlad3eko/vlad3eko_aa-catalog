@@ -3,7 +3,7 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxt/image', '@nuxt/icon', 'shadcn-nuxt', 'nuxt-swiper', '@nuxtjs/color-mode'],
+  modules: ['@nuxt/image', '@nuxt/icon', 'shadcn-nuxt', 'nuxt-swiper', '@nuxtjs/color-mode', '@pinia/nuxt'],
         app: {
             head: {
                 title: 'New',
