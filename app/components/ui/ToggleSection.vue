@@ -7,7 +7,7 @@
           {{ props.title }}
         </span>
       <div v-show="model"
-           class="absolute top-3.5 right-5 cursor-pointer">
+           class="absolute top-3 right-5 cursor-pointer">
         <span v-if="!isOpen"
               :class="MATERIAL_ICON_CLASS_COLOR_TEXT">visibility_off
         </span>

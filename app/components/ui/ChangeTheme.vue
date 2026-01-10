@@ -1,7 +1,7 @@
 <template>
-  <select v-model="$colorMode.preference" class="text-accent-foreground bg-background text-[1rem]">
-    <option value="light">Светлая</option>
-    <option value="dark">Тёмная</option>
+  <select v-model="$colorMode.preference" class="text-accent-foreground bg-background text-[1rem] cursor-pointer">
+    <option value="light" class="cursor-pointer">Светлая</option>
+    <option value="dark" class="cursor-pointer">Тёмная</option>
   </select>
 </template>
 

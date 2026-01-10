@@ -1,3 +1,5 @@
+@import "./colors.css";
+
 * {
     @apply transition duration-300
 }

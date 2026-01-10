@@ -1,0 +1,13 @@
+.card {
+    @apply bg-card hover:bg-muted-foreground/10
+    transition-colors duration-400 ease-in-out
+}
+
+.button {
+    @apply
+    bg-primary hover:bg-background
+    text-accent hover:text-accent-foreground
+    hover:m-[-1px] hover:border hover:border-accent-foreground
+    rounded-2xl
+    transition-colors duration-400 ease-in
+}

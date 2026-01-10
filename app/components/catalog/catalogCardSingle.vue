@@ -1,29 +1,36 @@
 <template>
-  <div class="cursor-pointer h-full bg-card hover:bg-foreground/80 hover:text-accent rounded-2xl card ">
+  <div class="cursor-pointer h-full w-full rounded-2xl card flex flex-col justify-between">
 
     <NuxtLink :to="`/catalog/${props.card.id}`">
-        <div class="text-3xl py-5 text-price italic">
-          <span v-if="!isRange(props.card.price)">
-                  {{ props.card.price }}
-                </span>
-          <span v-else>
-                  {{ props.card.price[0] }} - {{ props.card.price[1] }}
-                </span>
-        </div>
-      <div class="rounded">
-        <NuxtImg :src="props.card.img" class="h-[350px] object-cover mx-auto"/>
+      <div class="rounded image-response">
+        <NuxtImg :src="props.card.img" class="h-full object-cover mx-auto"/>
       </div>
       <div class="m-5">
-        <p class="font-bold border-muted-bottom pb-2 mb-2 rounded">
-          {{ props.card.name }}
-        </p>
+        <div class="grid justify-items-stretch grid-cols-3 font-bold border-muted-bottom pb-2 mb-2 rounded">
+          <div class="col-span-2 text-left text-2xl">
+            {{ props.card.name }}
+          </div>
+          <div class="text-right col-start-3 self-center">
+          <span v-if="!isRange(props.card.price)">
+                  <p class="text-2xl text-price tracking-[.25em]">{{ props.card.price }}</p>
+                </span>
+            <span v-else class="flex justify-end gap-2 items-center">
+                  <p class="text-price-sale tracking-[.15em]">{{ props.card.price[0] }}</p> / <p
+                class="text-2xl text-price tracking-[.15em]">{{ props.card.price[1] }}</p>
+                </span>
+          </div>
+        </div>
         <span v-for="cardInfoTitle in props.card?.info[0]?.data">
-            {{ cardInfoTitle?.title }}
+            <div class="text-left text-muted-foreground">
+              {{ cardInfoTitle?.title }}
+            </div>
           </span>
       </div>
-
     </NuxtLink>
 
+    <div class="button text-accent p-3 text-center uppercase tracking-[.25em] cursor-pointer">
+      Добавить в корзину
+    </div>
   </div>
 </template>
 

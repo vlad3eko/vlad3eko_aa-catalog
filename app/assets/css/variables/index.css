@@ -1,0 +1,5 @@
+@import "./sizes/text.css";
+@import "./sizes/image.css";
+@import "./theme/theme.css";
+@import "./transition/index.css";
+@import "./UI/material-symbols-outlined.css";
