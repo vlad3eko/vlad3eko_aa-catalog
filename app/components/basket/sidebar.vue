@@ -19,6 +19,7 @@
           <SheetTitle>Корзина</SheetTitle>
           <SheetDescription>
             <div class="flex flex-col gap-3 h-[800px] overflow-y-auto pr-4 bg-shell p-5">
+              <p v-if="!basket.isEmpty">Добавьте товар для отображения</p>
               <div
                   v-for="item in basket.items"
                   :key="item.card.id"
@@ -30,7 +31,7 @@
                 />
 
                 <div class="font-mono col-span-3">
-                  <p class="text-[12px] text-accent-foreground">{{ item.card.name }}</p>
+                  <p class="text-[12px] text-accent-foreground">{{ item.card.product }}</p>
                   <p class="text-[12px]">{{ item.card.category }}</p>
                 </div>
 
@@ -79,7 +80,9 @@
             </div>
           </sheet-title>
           <sheet-description>
-            <div class="button text-accent p-3 text-center uppercase tracking-[.25em] cursor-pointer">
+            <div
+                @click="basket.createOrder"
+                class="button text-accent p-3 text-center uppercase tracking-[.25em] cursor-pointer">
               Оформить заказ
             </div>
           </sheet-description>
@@ -105,7 +108,5 @@ import {useBasketStore} from "~/store/bastet.store";
 import {isRange} from "~~/server/utils/hooks/range.price";
 
 const basket = useBasketStore()
-
-console.log('basket.items', basket.items)
 
 </script>

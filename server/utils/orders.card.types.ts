@@ -1,9 +1,5 @@
-export interface IOrderCard {
-    menu: IOrderMenu[]
-    sales: IOrdersList[]
-}
-
-export interface IOrderMenu {
+export interface IOrder {
+    id: string
     name: string
     address: string
     product: string
@@ -11,9 +7,5 @@ export interface IOrderMenu {
     date: string
     delivery: string
     manager?: string
-    $createdAt?: number
-}
-
-export interface IOrdersList {
-    orders: IOrderMenu[]
+    createdAt?: number
 }

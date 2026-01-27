@@ -16,7 +16,7 @@ export interface ICardDescription {
 
 export interface ICard {
     id: number
-    name: string
+    product: string
     price: number | [number, number]
     img: string
     category: string

@@ -3,7 +3,7 @@ import {CardDescription} from "~~/server/utils/card.types";
 export const catalog: ICard[] = [
     {
         id: 0,
-        name: 'Умные часы',
+        product: 'Умные часы',
         price: 6000,
         img: "/catalog/tech/casi.png",
         category: "Техника",
@@ -68,7 +68,7 @@ export const catalog: ICard[] = [
     },
     {
         id: 1,
-        name: 'Часы + наушники',
+        product: 'Часы + наушники',
         price: [9500, 11999],
         img: "/catalog/tech/casiHears.png",
         category: "Техника",
@@ -126,7 +126,7 @@ export const catalog: ICard[] = [
     },
     {
         id: 2,
-        name: 'Очиститель воздуха',
+        product: 'Очиститель воздуха',
         price: [13499, 15499],
         img: "/catalog/tech/clearAir.png",
         category: "Техника",
@@ -186,7 +186,7 @@ export const catalog: ICard[] = [
     },
     {
         id: 3,
-        name: 'Экономия электроэнергии',
+        product: 'Экономия электроэнергии',
         price: 6000,
         img: "/catalog/tech/electro.png",
         category: "Техника",
@@ -238,7 +238,7 @@ export const catalog: ICard[] = [
     },
     {
         id: 4,
-        name: 'Бабушкафон',
+        product: 'Бабушкафон',
         price: 6000,
         img: "/catalog/tech/mob.png",
         category: "Техника",
@@ -292,7 +292,7 @@ export const catalog: ICard[] = [
     },
     {
         id: 5,
-        name: 'Обогреватель',
+        product: 'Обогреватель',
         price: 7000,
         img: "/catalog/tech/obogrev.png",
         category: "Техника",
@@ -346,7 +346,7 @@ export const catalog: ICard[] = [
     },
     {
         id: 6,
-        name: 'Тв приставка',
+        product: 'Тв приставка',
         price: [8500, 8999],
         img: "/catalog/tech/TV.png",
         category: "Техника",
@@ -399,7 +399,7 @@ export const catalog: ICard[] = [
     },
     {
         id: 7,
-        name: "Вакууматор продуктов",
+        product: "Вакууматор продуктов",
         price: 6000,
         img: "/catalog/tech/vacuum.png",
         category: "Техника",
@@ -462,7 +462,7 @@ export const catalog: ICard[] = [
     },
     {
         id: 8,
-        name: "Массажёр для глаз",
+        product: "Массажёр для глаз",
         price: [10000, 10999],
         img: "/catalog/health/eyes.png",
         category: "Здоровье",
@@ -521,7 +521,7 @@ export const catalog: ICard[] = [
     },
     {
         id: 9,
-        name: "Слуховой аппарат",
+        product: "Слуховой аппарат",
         price: [6999, 7999],
         img: "/catalog/health/hears.png",
         category: "Здоровье",
@@ -574,7 +574,7 @@ export const catalog: ICard[] = [
     },
     {
         id: 10,
-        name: "Массажный матрас",
+        product: "Массажный матрас",
         price: [15999, 17000],
         img: "/catalog/health/matras.png",
         category: "Здоровье",
@@ -637,7 +637,7 @@ export const catalog: ICard[] = [
     },
     {
         id: 11,
-        name: "Гидромассажный СПА-комплекс",
+        product: "Гидромассажный СПА-комплекс",
         price: [14500, 15999],
         img: "/catalog/health/spaLeg.png",
         category: "Здоровье",
@@ -690,7 +690,7 @@ export const catalog: ICard[] = [
     },
     {
         id: 12,
-        name: "Массажёр для суставов",
+        product: "Массажёр для суставов",
         price: [9999, 10999],
         img: "/catalog/health/sustavi.png",
         category: "Здоровье",
@@ -737,7 +737,7 @@ export const catalog: ICard[] = [
     },
     {
         id: 13,
-        name: "Духи Chanel Allure",
+        product: "Духи Chanel Allure",
         price: 5000,
         img: "/catalog/beauty/chanelAllure.png",
         category: "Красота",
@@ -799,7 +799,7 @@ export const catalog: ICard[] = [
     },
     {
         id: 14,
-        name: "Духи Chanel Bleu",
+        product: "Духи Chanel Bleu",
         price: 5000,
         img: "/catalog/beauty/chanelBleu.png",
         category: "Красота",
@@ -861,7 +861,7 @@ export const catalog: ICard[] = [
     },
     {
         id: 15,
-        name: "Духи Dior J'adore",
+        product: "Духи Dior J'adore",
         price: 5000,
         img: "/catalog/beauty/diorJadore.png",
         category: "Красота",
@@ -920,7 +920,7 @@ export const catalog: ICard[] = [
     },
     {
         id: 16,
-        name: "Духи Gucci Bloom",
+        product: "Духи Gucci Bloom",
         price: 5000,
         img: "/catalog/beauty/gucciBloom.png",
         category: "Красота",
@@ -973,7 +973,7 @@ export const catalog: ICard[] = [
     },
     {
         id: 17,
-        name: "Духи Gucci Flora",
+        product: "Духи Gucci Flora",
         price: 5000,
         img: "/catalog/beauty/gucciFlora.png",
         category: "Красота",
@@ -1032,7 +1032,7 @@ export const catalog: ICard[] = [
     },
     {
         id: 18,
-        name: "Духи Chanel Coco",
+        product: "Духи Chanel Coco",
         price: 5000,
         img: "/catalog/beauty/chanelCoco.png",
         category: "Красота",
@@ -1085,7 +1085,7 @@ export const catalog: ICard[] = [
     },
     {
         id: 19,
-        name: "Духи Chanel Paris",
+        product: "Духи Chanel Paris",
         price: 5000,
         img: "/catalog/beauty/chanelParis.png",
         category: "Красота",

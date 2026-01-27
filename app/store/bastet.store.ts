@@ -1,4 +1,5 @@
 import {defineStore} from 'pinia'
+import {useOrdersStore} from "~/store/orders.store";
 
 export const useBasketStore = defineStore('basket', {
     state: () => ({
@@ -21,6 +22,9 @@ export const useBasketStore = defineStore('basket', {
             })
             if (!total) return
             return total
+        },
+        isEmpty: (state) => {
+            return !!state.items.length
         }
     },
 
@@ -58,6 +62,17 @@ export const useBasketStore = defineStore('basket', {
             } else {
                 item.quantity--
             }
+
         },
+
+        clear() {
+            this.items = []
+        },
+
+        createOrder() {
+            const orderList = useOrdersStore()
+            orderList.add([...this.items])
+            this.clear()
+        }
     },
 })
