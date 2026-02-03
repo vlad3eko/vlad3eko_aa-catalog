@@ -1,22 +1,21 @@
 import type {IOrder} from "~~/server/utils/orders.card.types";
+import {defineStore} from "pinia";
 
-export const useOrdersStore = defineStore('orders', {
-    state: () => ({
-        orders: [] as IOrder[]
-    }),
-    getters: {
-        total: (state) => state.orders.length
-    },
-    actions: {
-        add(order: any) {
-            this.orders.push(order)
-            console.log(this.orders)
-        },
 
-        remove(orderId: number) {
-            return this.orders.filter(
-                item => item.id !== orderId
-            )
-        }
+export const useOrdersStore = defineStore('orders', () => {
+    const orders = ref([] as IOrder[])
+
+    const total = computed(() => {
+        return orders.value.length
+    })
+
+    function createOrder(order: IOrder) {
+        orders.value.push(order)
+    }
+
+    return {
+        orders,
+        total,
+        createOrder
     }
 })

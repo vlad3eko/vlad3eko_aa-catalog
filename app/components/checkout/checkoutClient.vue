@@ -11,16 +11,20 @@
             ФИО и адрес клиента, дата и способ доставки
           </DialogDescription>
         </DialogHeader>
-            <Input id="name" name="name" defaultValue="" placeholder="ФИО" class="border-accent border p-2" autofocus ref="name"/>
-            <Input id="address" name="address" defaultValue="" placeholder="Адрес" class="border-accent border p-2" />
+        <Input v-model="form.name" id="name" name="name" defaultValue="" placeholder="ФИО"
+               class="border-accent border p-2" autofocus/>
+        <Input v-model="form.address" id="address" name="address" defaultValue="" placeholder="Адрес"
+               class="border-accent border p-2"/>
         <div class="flex flex-col gap-2">
           <p>Способ доставки:</p>
           <div>
-            <input type="radio" id="currier" name="deliveryVariant" value="Курьерская служба" class="mr-2 cursor-pointer" checked/>
+            <input v-model="form.delivery" type="radio" id="currier" name="deliveryVariant" value="Курьерская служба"
+                   class="mr-2 cursor-pointer" checked/>
             <label for="currier" class="cursor-pointer">Курьерская служба</label>
           </div>
           <div class="mb-5">
-            <input type="radio" id="takeSelf" name="deliveryVariant" value="Пункт самовывоза" class="mr-2 cursor-pointer" >
+            <input v-model="form.delivery" type="radio" id="takeSelf" name="deliveryVariant" value="Пункт самовывоза"
+                   class="mr-2 cursor-pointer">
             <label for="takeSelf" class="cursor-pointer">Пункт самовывоза</label>
           </div>
         </div>
@@ -29,8 +33,9 @@
             <Button variant="ghost">Отмена</Button>
           </DialogClose>
           <Button
-              @click="basketStore.createOrder"
-              type="submit">Подтвердить заказ</Button>
+              @click="checkoutStore.createOrder(form)"
+              type="submit">Подтвердить заказ
+          </Button>
         </DialogFooter>
       </DialogContent>
     </form>
@@ -52,10 +57,19 @@ import {useBasketStore} from "~/store/basket.store";
 import {Button} from "~/components/ui/button";
 import {Input} from "~/components/ui/input";
 import {useTemplateRef} from "vue";
+import {useCheckoutStore} from "~/store/checkout.store";
 
 const basketStore = useBasketStore()
-const clientName = useTemplateRef('name')
-basketStore.addClientInfo(clientName)
+const checkoutStore = useCheckoutStore()
+
+const form = reactive({
+  name: '',
+  address: '',
+  delivery: checkoutStore.checkout.delivery,
+  date: new Date().toISOString()
+})
+
+
 
 </script>
 

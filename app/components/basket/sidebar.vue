@@ -82,12 +82,12 @@
             </div>
           </sheet-title>
           <sheet-description>
-            <dialog-info-client>
+            <checkout-client>
             <div
                 class="button text-accent p-3 text-center uppercase tracking-[.25em] cursor-pointer">
               Продолжить
             </div>
-            </dialog-info-client>
+            </checkout-client>
           </sheet-description>
         </sheet-footer>
       </SheetContent>
@@ -110,7 +110,7 @@ import {MATERIAL_ICON_CLASS_COLOR_TEXT} from "~~/server/utils/classes/material-i
 import {useBasketStore} from "~/store/basket.store";
 import {isRange} from "~~/server/utils/hooks/range.price";
 import {Dialog} from "~/components/ui/dialog";
-import DialogInfoClient from "~/components/basket/dialogInfoClient.vue";
+import CheckoutClient from "~/components/checkout/checkoutClient.vue";
 
 const basket = useBasketStore()
 
