@@ -1,7 +1,7 @@
 <template>
-  <div class="text-accent-foreground p-5">
-   <kanban-card-item/>
-  </div>
+    <div class="text-accent-foreground p-5 flex gap-5">
+      <kanban-card-list/>
+    </div>
 </template>
 
 <script lang="ts" setup>
