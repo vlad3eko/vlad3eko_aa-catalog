@@ -1,12 +1,8 @@
+import {ICheckout} from "~~/server/utils/checkout.types";
+import {IBasketItem} from "~~/server/utils/card.types";
+
 export interface IOrder {
-    id: number
-    product: string[]
-    price: number | [number, number]
-    img?: string[]
-    name: string
-    address: string
-    date: string
-    delivery: string
-    manager?: string
-    createdAt?: number
+    items: IBasketItem[]
+    checkout: ICheckout
+    createdAt: string
 }

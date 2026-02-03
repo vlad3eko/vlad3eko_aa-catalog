@@ -1,86 +1,75 @@
 import {defineStore} from 'pinia'
-import {useOrdersStore} from "~/store/orders.store";
+import type {IBasketItem} from "~~/server/utils/card.types";
 
 
-export const useBasketStore = defineStore('basket', {
-    state: () => ({
-        items: [] as BasketItem[],
-    }),
 
-    getters: {
-        totalPrice: (state) =>
-            state.items.reduce((sum, item) => {
-                const price = Array.isArray(item.card.price)
-                    ? item.card.price[1]
-                    : item.card.price
+export const useBasketStore = defineStore('basket', () => {
+    const items = ref([] as IBasketItem[])
 
-                return sum + price * item.quantity
-            }, 0),
-        count: (state) => {
-            let total = 0
-            state.items.forEach((count) => {
-                total += count.quantity
-            })
-            if (!total) return
-            return total
-        },
-        isEmpty: (state) => {
-            return !!state.items.length
-        }
-    },
+    const totalPrice = computed(() => {
+        return items.value.reduce((sum, item) => {
+            const price = Array.isArray(item.card.price)
+                ? item.card.price[1]
+                : item.card.price
 
-    actions: {
-        add(card: ICard) {
-            const existing = this.items.find(
-                item => item.card.id === card.id
-            )
+            return sum + price * item.quantity
+        }, 0)
+    })
 
-            if (existing) {
-                existing.quantity++
-            } else {
-                this.items.push({card, quantity: 1})
-            }
-        },
+    const count = computed(() => {
+        let total = 0
+        items.value.forEach((count) => {
+            total += count.quantity
+        })
 
-        remove(cardId: number) {
-            this.items = this.items.filter(
-                item => item.card.id !== cardId
-            )
-        },
+        if (!total) return
+        return total
+    })
 
-        increment(cardId: number) {
-            const item = this.items.find(i => i.card.id === cardId)
+    const isEmpty = computed(() => {
+        return !!items.value.length
+    })
 
-            if (item) item.quantity++
-        },
+    function add(card: ICard) {
+        const existing = items.value.find(item =>
+            item.card.id === card.id)
 
-        decrement(cardId: number) {
-            const item = this.items.find(i => i.card.id === cardId)
-            if (!item) return
+        if (existing) existing.quantity++
+        else items.value.push({card, quantity: 1})
+    }
 
-            if (item.quantity === 1) {
-                this.remove(cardId)
-            } else {
-                item.quantity--
-            }
+    function removeCard(cardId: number) {
+        items.value = items.value.filter(item => item.card.id !== cardId)
+    }
 
-        },
+    function increment(cardId: number) {
+        const item = items.value.find(i => i.card.id === cardId)
 
-        clearStore() {
-            this.items = []
-        },
+        if (item) item.quantity++
+    }
 
-        createOrder() {
-            const orderList = useOrdersStore()
+    function decrement(cardId: number) {
+        const item = items.value.find(i => i.card.id === cardId)
 
-            if (this.items.length) {
-                orderList.add([...this.items])
-                this.clearStore()
-            }
-        },
+        if (!item) return
 
-        addClientInfo(date: any) {
-            console.log('date', date)
-        }
-    },
+        if (item.quantity === 1) removeCard(cardId)
+        else item.quantity--
+    }
+
+    function clearStore() {
+        items.value = []
+    }
+
+    return {
+        items,
+        totalPrice,
+        count,
+        isEmpty,
+        add,
+        increment,
+        decrement,
+        clearStore,
+    }
 })
+
