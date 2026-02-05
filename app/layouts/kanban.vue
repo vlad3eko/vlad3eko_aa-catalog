@@ -7,7 +7,7 @@
       </div>
       <ul v-for="item in menu" class="text-accent-foreground p-2 animate-from-left">
         <li>
-          <NuxtLink :to="item.link" class="text-2xl uppercase font-bold">{{ item.name }}</NuxtLink>
+          <NuxtLink :to="item.link" class="text-2xl uppercase font-bold ">{{ item.name }}</NuxtLink>
         </li>
       </ul>
     </div>

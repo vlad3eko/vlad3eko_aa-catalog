@@ -8,3 +8,7 @@
     white-space: wrap;
   }
 }
+
+.unselectable {
+  user-select: none;
+}

@@ -1,10 +1,10 @@
 <template>
-  <Dialog>
-    <form>
+  <Dialog class="">
+    <form class="animate-from-right">
       <DialogTrigger asChild>
         <slot/>
       </DialogTrigger>
-      <DialogContent class="sm:max-w-[425px]">
+      <DialogContent class="sm:max-w-[425px] unselectable animate-from-right">
         <DialogHeader>
           <DialogTitle>Дополнительная информация</DialogTitle>
           <DialogDescription>
@@ -17,33 +17,33 @@
                class="border-accent border p-2"/>
         <div class="flex gap-10">
           <div>
-            <p>Способ доставки:</p>
-            <div>
+            <DialogTitle>Способ доставки:</DialogTitle>
+            <DialogDescription>
               <input v-model="form.delivery" type="radio" id="currier" name="deliveryVariant" value="Курьер"
                      class="mr-2 cursor-pointer" checked/>
               <label for="currier" class="cursor-pointer">Курьерская служба</label>
-            </div>
-            <div class="mb-5">
+            </DialogDescription>
+            <DialogDescription class="mb-5">
               <input v-model="form.delivery" type="radio" id="takeSelf" name="deliveryVariant" value="ПВЗ"
                      class="mr-2 cursor-pointer">
-              <label for="takeSelf" class="cursor-pointer">Пункт самовывоза</label>
-            </div>
+               <label for="takeSelf" class="cursor-pointer">Пункт самовывоза</label>
+            </DialogDescription>
           </div>
           <div>
             <div class="flex gap-2">
-              <p>Дата доставки:</p>
+              <DialogTitle>Дата доставки:</DialogTitle>
               <input v-model="form.date"
                      type="date"
                      :min="dateToday"
                      class="mr-2 cursor-pointer">
             </div>
+            <DialogDescription>
             <input type="checkbox" id="soonAsPossible" name="soonAsPossible" value="Ближайшая"
                    class="mr-2 cursor-pointer" checked>
-            <label for="soonAsPossible" class="cursor-pointer">Ближайшая</label>
-
+             <label for="soonAsPossible" class="cursor-pointer">Ближайшая</label>
+            </DialogDescription>
           </div>
         </div>
-
         <DialogFooter>
           <DialogClose asChild>
             <Button variant="ghost">Отмена</Button>
