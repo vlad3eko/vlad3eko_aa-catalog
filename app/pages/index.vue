@@ -16,7 +16,7 @@
 <script lang="ts" setup>
 
 useSeoMeta({
-  title: "Агент-Ассист"
+  title: "Агент-Ассист",
 })
 
 import {MATERIAL_ICON_CLASS_COLOR_TEXT} from "~~/server/utils/classes/material-icon.shortcut";
