@@ -15,6 +15,7 @@
 
 @keyframes from-right {
     0% { transform: translateX(50px); opacity: 0; }
+    50% { transform: translateX(-10px); opacity: 0.7; }
     100% { transform: translateX(0);  opacity: 1; }
 }
 
@@ -22,5 +23,6 @@
 
 @keyframes from-left {
     100% { transform: translateX(0);  opacity: 1; }
+    50% { transform: translateX(10px); opacity: 0.7; }
     0% { transform: translateX(-50px); opacity: 0; }
 }
