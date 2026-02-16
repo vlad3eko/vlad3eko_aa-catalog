@@ -11,6 +11,7 @@
         <nav v-if="showMenu"
              class="absolute left-0 top-8 sm:sr-only not-sr-only bg-background p-2 border rounded-2xl">
           <ul
+
               v-for="listMenu in menu" :key="listMenu.id"
               class="mr-5 last:mr-0 ">
             <li>
