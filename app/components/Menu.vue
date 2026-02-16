@@ -1,5 +1,5 @@
 <template>
-    <div class="mx-auto container p-2 px-4">
+    <div class="p-2 px-4">
       <nav class="flex w-max sm:hidden relative">
         <div
             @click="showMenu = !showMenu"
@@ -9,7 +9,7 @@
           <p class="bg-muted-foreground w-[50px] h-[3px]"></p>
         </div>
         <nav v-if="showMenu"
-             class="absolute left-0 top-8 sm:sr-only not-sr-only bg-background p-2 border rounded-2xl">
+             class="absolute right-0 top-8 sm:sr-only not-sr-only bg-background p-2 border rounded-2xl">
           <ul
 
               v-for="listMenu in menu" :key="listMenu.id"
