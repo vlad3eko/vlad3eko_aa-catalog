@@ -3,7 +3,7 @@ export default defineEventHandler((event) => {
 	return [
 		{
 			"id": 0,
-			"name": "Агент Ассист",
+			"name": "Ассист",
 			"link": "/",
 			"list": []
 		},
