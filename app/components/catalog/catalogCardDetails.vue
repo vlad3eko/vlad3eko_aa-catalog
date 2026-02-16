@@ -1,7 +1,7 @@
 <template>
     <h1 class="p-2 sticky text-3xl font-bold text-center text-primary bg-shell z-2 uppercase rounded-2xl top-12  select-text shadow-xl">
       {{ props.card.product }}</h1>
-    <div class="grid lg:grid-cols-2 px-5">
+    <div class="grid lg:grid-cols-2 px-5 mb-30">
       <div class="flex items-center justify-center self-start lg:sticky lg:top-35 px-10 scale-x-[.85] scale-y-[.85] animate-from-top">
         <NuxtImg :src="props.card.img" :alt="props.card.product"/>
       </div>

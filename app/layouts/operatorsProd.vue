@@ -13,12 +13,10 @@
       </div>
     </div>
   </main>
-  <footer-component/>
-
 </template>
 
 <script lang="ts" setup>
 
-import ChangeTheme from "~/components/ui/ChangeTheme";
+import ChangeTheme from "~/components/ui/ChangeTheme.vue";
 
 </script>
