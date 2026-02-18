@@ -11,6 +11,8 @@
             <Menu/>
           </div>
         </div>
+        {{telegramStore.user?.firts_name}}
+        {{telegramStore.user}}
         <slot/>
       </div>
     </div>
@@ -20,5 +22,8 @@
 <script lang="ts" setup>
 
 import ChangeTheme from "~/components/ui/ChangeTheme.vue";
+import {useTelegramStore} from "~/store/telegram.store";
+
+const telegramStore = useTelegramStore()
 
 </script>
