@@ -7,5 +7,5 @@
 <script setup lang="ts">
 
 
-const tg = window?.Telegram.WebApp.initDataUnsafe
+const tg = window?.Telegram.WebApp.initData
 </script>
