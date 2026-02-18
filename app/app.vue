@@ -1,6 +1,6 @@
 <template>
     <NuxtLayout>
-       <p>Добро пожаловать: {{tgUser.first_name}}</p>
+       <p>Добро пожаловать: {{tgUser?.first_name}}</p>
       <NuxtPage/>
     </NuxtLayout>
 </template>
