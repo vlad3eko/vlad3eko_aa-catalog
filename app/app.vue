@@ -1,6 +1,8 @@
 <template>
     <NuxtLayout>
-       Добро пожаловать {{tg}}
+       Добро пожаловать {{tg.first_name}}
+      ваш язык {{tg.language_code}}
+      <NuxtImg :src="tg.photo_url"/>
       <NuxtPage/>
     </NuxtLayout>
 </template>
