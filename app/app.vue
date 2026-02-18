@@ -7,5 +7,5 @@
 <script setup lang="ts">
 
 
-const tg = window?.Telegram.WebApp.answerWebAppQuery
+const tg = window?.Telegram.WebApp.initData
 </script>
