@@ -11,7 +11,9 @@
             <Menu/>
           </div>
         </div>
-        {{telegramStore.user?.firts_name}}
+        <p>Имя: {{telegramStore.user.first_name}}</p>
+        <p>Логин: {{telegramStore.user.username}}</p>
+        <img :src="telegramStore.user.photo_url" alt="аватар">
         {{telegramStore.user}}
         <slot/>
       </div>
