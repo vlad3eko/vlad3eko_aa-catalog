@@ -9,7 +9,7 @@
   </div>
   <p class="p-2 border-border border-r">{{ formatDate }}</p>
   <p class="p-2 border-border border-r">{{ order.checkout.delivery }}</p>
-  <p class="p-2 border-border border-r">{{ }}</p>
+  <p class="p-2 border-border border-r">{{ telegramStore?.user.first_name }}</p>
   <p class="p-2 border-border">{{ formatDateIso(order.createdAt) }}</p>
 </template>
 
@@ -17,9 +17,11 @@
 
 import {formatDateIso} from "~~/server/utils/hooks/formatDate";
 import {useOrdersStore} from "~/store/orders.store";
+import {useTelegramStore} from "~/store/telegram.store";
 
 const props = defineProps<{order: IOrder}>()
 const ordersStore = useOrdersStore()
+const telegramStore = useTelegramStore()
 
 const productText = computed(() =>
     props.order.items

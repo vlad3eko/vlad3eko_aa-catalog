@@ -1,8 +1,15 @@
 <template>
   <NuxtLayout>
+    {{telegramStore}}
     <NuxtPage/>
   </NuxtLayout>
 </template>
+<script setup lang="ts">
+import {useTelegramStore} from "~/store/telegram.store";
+
+const telegramStore = useTelegramStore()
+
+</script>
 {
   "id": 788847654,
   "first_name": "Влад 🦄",
