@@ -1,10 +1,10 @@
 <template>
   <div class="grid bg-background">
     <div class="col-start-1 border-r  bg-background p-5">
-      <div class="flex justify-between border-border border-b pb-8 mb-5">
-        <change-theme class="animate-from-top"/>
-        <sidebar/>
-      </div>
+        <div class="flex justify-between border-border border-b pb-8 mb-5">
+          <change-theme class="animate-from-top"/>
+          <sidebar/>
+        </div>
       <ul v-for="item in menu" class="text-accent-foreground p-2 animate-from-left">
         <li>
           <NuxtLink :to="item.link" class="text-2xl uppercase font-bold ">{{ item.name }}</NuxtLink>

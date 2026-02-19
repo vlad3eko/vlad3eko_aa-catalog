@@ -18,6 +18,12 @@ export default defineEventHandler((event) => {
 			"name": "Заказы",
 			"link": "/orders",
 			"list": []
-		}
+		},
+		{
+			"id": 3,
+			"name": "Профиль",
+			"link": "/profile",
+			"list": []
+		},
 	]
 })
