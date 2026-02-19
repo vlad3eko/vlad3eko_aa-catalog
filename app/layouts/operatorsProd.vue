@@ -13,7 +13,7 @@
               <div
                   class="max-w-10 rounded-4xl overflow-hidden self-center">
                 <img
-                    v-if="telegramStore.user"
+                    v-if="telegramStore?.user?.id"
                     src="https://t.me/i/userpic/320/QxFjFXL2ezATNOY7K4LhJlCl7NBsSiCJjuU5BXZIjXM.svg" alt="Аватар"/>
                 <img
                     v-else

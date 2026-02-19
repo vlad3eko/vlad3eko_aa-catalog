@@ -9,7 +9,7 @@
   </div>
   <p class="p-2 border-border border-r">{{ formatDate }}</p>
   <p class="p-2 border-border border-r">{{ order.checkout.delivery }}</p>
-  <p class="p-2 border-border border-r">{{ telegramStore?.user.first_name }}</p>
+  <p class="p-2 border-border border-r">{{ telegramStore?.user ? telegramStore.user.first_name : false }}</p>
   <p class="p-2 border-border">{{ formatDateIso(order.createdAt) }}</p>
 </template>
 
