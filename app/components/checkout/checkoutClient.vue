@@ -8,7 +8,7 @@
         <DialogHeader>
           <DialogTitle>Дополнительная информация</DialogTitle>
           <DialogDescription>
-            <span class="text-red-700">*</span>ФИО и адрес клиента, дата и способ доставки
+            <span class="text-error text-2xl">*</span>ФИО и адрес клиента, дата и способ доставки
           </DialogDescription>
         </DialogHeader>
         <Input v-model="form.name" id="name" name="name" defaultValue="" placeholder="ФИО"
@@ -35,7 +35,7 @@
               <input v-model="form.date"
                      type="date"
                      :min="dateToday"
-                     class="mr-2 cursor-pointer">
+                     class="mr-2 cursor-pointer text-accent-foreground">
             </div>
             <DialogDescription>
             <input type="checkbox" id="soonAsPossible" name="soonAsPossible" value="Ближайшая"
@@ -75,7 +75,6 @@ import {useModalStore} from "~/store/modal.store";
 import {useBasketStore} from "~/store/basket.store";
 
 const checkoutStore = useCheckoutStore()
-const basketStore = useBasketStore()
 const modalStore = useModalStore()
 
 const dateToday = computed(() => {

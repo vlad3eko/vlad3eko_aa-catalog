@@ -19,6 +19,7 @@
     --color-border: oklch(0.88 0.005 260);
     --color-input: oklch(0.88 0.005 260);
     --color-outline: oklch(0.56 0.20 255);
+    --color-error: oklch(0.586 0.215 28.242);
 }
 
 .dark {
@@ -41,4 +42,5 @@
     --color-border: oklch(0.32 0.006 260);
     --color-input: oklch(0.32 0.006 260);
     --color-outline: oklch(0.62 0.20 255);
+    --color-error: oklch(0.586 0.215 28.242);
 }
