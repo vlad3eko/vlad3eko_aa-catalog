@@ -1,6 +1,7 @@
 <template>
-  <div class="animate-from-top">
-    <Sheet>
+  <div
+      class="animate-from-top">
+    <Sheet v-model:open="basket.isOpen">
       <SheetTrigger>
         <div class="relative cursor-pointer">
           <span
@@ -14,7 +15,8 @@
             }}</span>
         </div>
       </SheetTrigger>
-      <SheetContent class="animate-from-right">
+      <SheetContent
+          class="animate-from-right">
         <SheetHeader class="overflow-hidden">
           <SheetTitle>Корзина</SheetTitle>
           <SheetDescription>
@@ -109,7 +111,6 @@ import {SheetFooter} from "~/components/ui/sheet";
 import {MATERIAL_ICON_CLASS_COLOR_TEXT} from "~~/server/utils/classes/material-icon.shortcut";
 import {useBasketStore} from "~/store/basket.store";
 import {isRange} from "~~/server/utils/hooks/range.price";
-import {Dialog} from "~/components/ui/dialog";
 import CheckoutClient from "~/components/checkout/checkoutClient.vue";
 
 const basket = useBasketStore()

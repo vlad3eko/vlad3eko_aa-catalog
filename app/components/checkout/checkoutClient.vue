@@ -1,5 +1,5 @@
 <template>
-  <Dialog class="">
+  <Dialog v-model:open="checkoutStore.isOpen">
     <form class="animate-from-right">
       <DialogTrigger asChild>
         <slot/>
@@ -8,7 +8,7 @@
         <DialogHeader>
           <DialogTitle>Дополнительная информация</DialogTitle>
           <DialogDescription>
-            ФИО и адрес клиента, дата и способ доставки
+            <span class="text-red-700">*</span>ФИО и адрес клиента, дата и способ доставки
           </DialogDescription>
         </DialogHeader>
         <Input v-model="form.name" id="name" name="name" defaultValue="" placeholder="ФИО"
@@ -48,10 +48,9 @@
           <DialogClose asChild>
             <Button variant="ghost">Отмена</Button>
           </DialogClose>
-          <Button
-              @click="checkoutStore.createOrder(form)"
-              type="submit">Подтвердить заказ
-          </Button>
+            <Button @click="handleCreateOrder">
+              Подтвердить заказ
+            </Button>
         </DialogFooter>
       </DialogContent>
     </form>
@@ -72,8 +71,12 @@ import {
 import {Button} from "~/components/ui/button";
 import {Input} from "~/components/ui/input";
 import {useCheckoutStore} from "~/store/checkout.store";
+import {useModalStore} from "~/store/modal.store";
+import {useBasketStore} from "~/store/basket.store";
 
 const checkoutStore = useCheckoutStore()
+const basketStore = useBasketStore()
+const modalStore = useModalStore()
 
 const dateToday = computed(() => {
   const date = new Date()
@@ -91,6 +94,26 @@ const form = reactive({
   delivery: checkoutStore.checkout.delivery,
   date: checkoutStore.checkout.date
 })
+
+const error = 'Пропущенное поле!'
+
+const handleCreateOrder = () => {
+  const success = checkoutStore.createOrder(form)
+
+  if (success) {
+    modalStore.setMessage(
+        'Заказ успешно создан',
+        'Перейти в заказы?',
+        '/orders',
+    )
+  } else {
+    if (!form.name && !form.address) {
+      form.name = error
+    } else if (!form.address) {
+      form.address = error
+    }
+  }
+}
 
 </script>
 

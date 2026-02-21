@@ -3,6 +3,7 @@
     {{telegramStore?.user}}
     <NuxtPage/>
   </NuxtLayout>
+  <ModalMessage/>
 </template>
 <script setup lang="ts">
 import {useTelegramStore} from "~/store/telegram.store";

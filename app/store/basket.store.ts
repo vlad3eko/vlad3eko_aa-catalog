@@ -1,10 +1,12 @@
 import {defineStore} from 'pinia'
 import type {IBasketItem} from "~~/server/utils/card.types";
+import {useCheckoutStore} from "~/store/checkout.store";
 
 
 
 export const useBasketStore = defineStore('basket', () => {
     const items = ref([] as IBasketItem[])
+    const isOpen = ref<boolean>(false)
 
     const totalPrice = computed(() => {
         return items.value.reduce((sum, item) => {
@@ -61,8 +63,10 @@ export const useBasketStore = defineStore('basket', () => {
         items.value = []
     }
 
+
     return {
         items,
+        isOpen,
         totalPrice,
         count,
         isEmpty,

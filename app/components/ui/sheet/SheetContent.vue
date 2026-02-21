@@ -29,11 +29,12 @@ const emits = defineEmits<DialogContentEmits>()
 const delegatedProps = reactiveOmit(props, "class", "side")
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
+
 </script>
 
 <template>
   <DialogPortal>
-    <SheetOverlay />
+    <SheetOverlay/>
     <DialogContent
       data-slot="sheet-content"
       :class="cn(

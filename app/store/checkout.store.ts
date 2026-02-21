@@ -11,6 +11,7 @@ export const useCheckoutStore = defineStore('checkout', () => {
         delivery: 'Курьер',
         date: 'Ближайшая'
     } as ICheckout)
+    const isOpen = ref<boolean>(false)
 
     function createOrder(date: ICheckout) {
         checkout.value = date
@@ -18,15 +19,18 @@ export const useCheckoutStore = defineStore('checkout', () => {
         const basketStore = useBasketStore()
         const ordersStore = useOrdersStore()
 
-        if (!basketStore.items.length) return
+        const unSuccess = !(!basketStore.items.length || checkout.value.name && checkout.value.address)
+        if (unSuccess) return false
+
         else ordersStore.createOrder({
-            items: basketStore.items,
+            items: [...basketStore.items],
             checkout: checkout.value,
             createdAt: new Date().toISOString()
         })
-
         basketStore.clearStore()
         clearStore()
+
+        return true
     }
 
     function clearStore() {
@@ -40,6 +44,7 @@ export const useCheckoutStore = defineStore('checkout', () => {
 
     return {
         checkout,
+        isOpen,
         createOrder
     }
 })
