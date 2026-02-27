@@ -3,7 +3,14 @@
       {{ props.card.product }}</h1>
     <div class="grid lg:grid-cols-2 px-5 mb-30">
       <div class="flex items-center justify-center self-start lg:sticky lg:top-35 px-10 scale-x-[.85] scale-y-[.85] animate-from-top">
-        <NuxtImg :src="props.card.img" :alt="props.card.product"/>
+       <div class="flex flex-col gap-5">
+         <NuxtImg :src="props.card.img" :alt="props.card.product"/>
+         <div
+             @click="basket.add(props.card)"
+             class="button text-accent p-3 text-center uppercase tracking-[.25em] cursor-pointer">
+           Добавить в корзину
+         </div>
+       </div>
       </div>
 
       <div class="text-left">
@@ -69,12 +76,15 @@
 
 import {isRange} from "~~/server/utils/hooks/range.price";
 import ToggleSection from "~/components/ui/ToggleSection.vue";
+import {useBasketStore} from "~/store/basket.store";
 
 
 
 const props = defineProps<{
   card: ICard
 }>()
+
+const basket = useBasketStore()
 
 useSeoMeta({
   title: `${props.card.product}`

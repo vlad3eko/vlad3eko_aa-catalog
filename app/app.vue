@@ -1,6 +1,5 @@
 <template>
   <NuxtLayout>
-    {{telegramStore?.user}}
     <NuxtPage/>
   </NuxtLayout>
   <ModalMessage/>

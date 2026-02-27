@@ -1,7 +1,7 @@
 <template>
-  <main class="relative ">
-    <div class="bg-background text-foreground ">
-      <div class="container mx-auto ">
+  <main class="relative">
+    <div class="bg-background text-foreground min-h-[100vh]">
+      <div class="container mx-auto">
         <div class="sticky top-0 z-3">
           <div class="flex justify-between px-5 bg-background animate-from-top">
             <div class="flex items-center">
@@ -10,7 +10,7 @@
             </div>
             <div class="flex">
               <Menu/>
-              <TelegramAvatarPreview/>
+              <TelegramAvatarPreview variant="avatar"/>
             </div>
           </div>
         </div>

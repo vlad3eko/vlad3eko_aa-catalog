@@ -1,13 +1,8 @@
 <template>
-  <div class="max-w-10 rounded-4xl overflow-hidden self-center">
-    <div v-if="telegramStore?.user?.id">
-      <img :src="telegramStore.user.photo_url"
+  <div
+      :class="classes">
+      <img :src="telegramStore.user?.id ? telegramStore.user.photo_url : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq2k2sI1nZyFTtoaKSXxeVzmAwIPchF4tjwg&s'"
            alt="Аватар"/>
-    </div>
-    <div v-else>
-      <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
-           alt="Аватар"/>
-    </div>
   </div>
 </template>
 
@@ -15,6 +10,29 @@
 import {useTelegramStore} from "~/store/telegram.store";
 
 const telegramStore = useTelegramStore()
+
+interface Props {
+  variant: 'avatar' | 'profile'
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  variant: "avatar"
+})
+
+const classes = computed(() => {
+  const base = ' rounded-4xl overflow-hidden self-center'
+
+  const variants = {
+    avatar: 'max-w-10',
+    profile: 'max-w-100'
+  }
+
+  return [
+    base,
+    variants[props.variant]
+  ].join(' ')
+})
+
 
 </script>
 

@@ -26,7 +26,7 @@
             <DialogDescription class="mb-5">
               <input v-model="form.delivery" type="radio" id="takeSelf" name="deliveryVariant" value="ПВЗ"
                      class="mr-2 cursor-pointer">
-               <label for="takeSelf" class="cursor-pointer">Пункт самовывоза</label>
+              <label for="takeSelf" class="cursor-pointer">Пункт самовывоза</label>
             </DialogDescription>
           </div>
           <div>
@@ -38,9 +38,9 @@
                      class="mr-2 cursor-pointer text-accent-foreground">
             </div>
             <DialogDescription>
-            <input type="checkbox" id="soonAsPossible" name="soonAsPossible" value="Ближайшая"
-                   class="mr-2 cursor-pointer" checked>
-             <label for="soonAsPossible" class="cursor-pointer">Ближайшая</label>
+              <input type="checkbox" id="soonAsPossible" name="soonAsPossible" value="Ближайшая"
+                     class="mr-2 cursor-pointer" checked>
+              <label for="soonAsPossible" class="cursor-pointer">Ближайшая</label>
             </DialogDescription>
           </div>
         </div>
@@ -48,9 +48,9 @@
           <DialogClose asChild>
             <Button variant="ghost">Отмена</Button>
           </DialogClose>
-            <Button @click="handleCreateOrder">
-              Подтвердить заказ
-            </Button>
+          <Button @click="handleCreateOrder">
+            Подтвердить заказ
+          </Button>
         </DialogFooter>
       </DialogContent>
     </form>
@@ -72,7 +72,6 @@ import {Button} from "~/components/ui/button";
 import {Input} from "~/components/ui/input";
 import {useCheckoutStore} from "~/store/checkout.store";
 import {useModalStore} from "~/store/modal.store";
-import {useBasketStore} from "~/store/basket.store";
 
 const checkoutStore = useCheckoutStore()
 const modalStore = useModalStore()
@@ -94,7 +93,7 @@ const form = reactive({
   date: checkoutStore.checkout.date
 })
 
-const error = 'Пропущенное поле!'
+const error = `Пропущенное поле !`
 
 const handleCreateOrder = () => {
   const success = checkoutStore.createOrder(form)
@@ -106,8 +105,10 @@ const handleCreateOrder = () => {
         '/orders',
     )
   } else {
-    if (!form.name && !form.address) {
-      form.name = error
+    if (!form.name || !(!form.name && !form.address)) {
+      form.name = error.toUpperCase()
+      form.address = error.toUpperCase()
+
     } else if (!form.address) {
       form.address = error
     }
