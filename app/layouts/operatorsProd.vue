@@ -10,7 +10,9 @@
             </div>
             <div class="flex">
               <Menu/>
-              <TelegramAvatarPreview variant="avatar"/>
+              <nuxt-link to="/profile">
+                <TelegramAvatarPreview variant="avatar"/>
+              </nuxt-link>
             </div>
           </div>
         </div>

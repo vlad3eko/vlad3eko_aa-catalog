@@ -1,7 +1,7 @@
 <template>
   <div
       :class="classesStyle"
-      class="flex flex-col justify-center gap-5 mt-10">
+      class="flex flex-col justify-center gap-5 mt-15 mb-15">
     <div class="flex flex-col justify-center gap-5">
       <TelegramAvatarPreview variant="profile" class="border border-foreground"/>
       <div class="flex gap-1 justify-center">
@@ -25,7 +25,7 @@ definePageMeta({
   layout: 'operators-prod',
 })
 
-const styleInfo = 'border-b-3 border-card-foreground/20 pb-2 mb-2 '
+const styleInfo = 'border-b border-card-foreground/20 pb-2 mb-2 '
 
 const classesStyle = computed(() => {
   const textStyle = 'text-foreground text-2xl tracking-widest'
